@@ -1,34 +1,34 @@
 # WebITBANK
-GRUPO-3
+GRUPO-3 📚
   
-  <Bienvenido a el Repositorio WEB>
+  < Bienvenido a el Repositorio WEB-ITBANK 🌎 > 
       
-      Aquí vamos compilando el trabajo en conjunto del desarrollo del Homebanking para el ITBANK.
+      ➕ Aquí vamos compilando el trabajo en conjunto del desarrollo del Homebanking para el ITBANK.
           
-      Queremos lograr el mejor sitio web posible que cumpla con los requerimientos de los usuarios
-         
-      Buscamos un diseño limpio y claro, de facil comprensión y cómodo uso para los usuarios.
+      ➕ Queremos lograr el mejor sitio web posible que cumpla con los requerimientos de los usuarios.
+     
+      ➕ Buscamos un diseño limpio y claro, de facil comprensión y cómodo uso para el cliente.
           
-      Redefinimos aspectos y lograremos una página moderna.
+      ➕ Redefinimos aspectos y lograremos una página moderna.
   
  
-      Para entonces estamos en la primera etapa en la que hicimos:
+      🟢 Para entonces estamos en la primera etapa en la que hicimos:
       
-         > Index dinámico.
+         ✔️️  > Index dinámico. 
    
-         > Página de Login.
+         ✔️  > Página de Login.
     
-         > Página de "Olvidé mi Clave".
+         ✔️  > Página de "Olvidé mi Clave".
     
-         > Anexamos Link en el Login hacia la página de "Olvide mi Clave".
+         ✔️  > Anexamos Link en el Login hacia la página de "Olvide mi Clave".
     
-         > Trabajamos con lenguajes HTML, CSS.
+         ✔️  > Trabajamos con lenguajes HTML, CSS.
     
-         > Aplicamos el Responsive Desing.
+         ✔️  > Aplicamos el Responsive Desing.
     
-         > Se aplicó un correcto Indexado.
+         ✔️  > Se aplicó un correcto Indexado.
     
-         > Footer correspondiente.
+         ✔️  > Footer correspondiente.
   
 
 
