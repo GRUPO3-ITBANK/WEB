@@ -19,15 +19,16 @@ body {
   background-attachment: fixed;
   grid-template-rows: auto 1fr auto;
   min-height: max-content;
-  margin-bottom: 100px;
   overflow-x: hidden;
+
+  min-height: 100vh;
+  margin: 0;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   color: white;
+  z-index: 1;
 }
 
 .bg-color {
@@ -40,13 +41,14 @@ img.barra-colores {
   height: 10px;
   left: 0px;
   top: 98%;
+  z-index: 2;
 }
 img.barra-coloresdown {
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 10px;
   left: 0px;
-  bottom: 100%;
+  bottom: 10px;
 }
 
 .container-fluid {
@@ -56,21 +58,6 @@ img.barra-coloresdown {
 .logo {
   width: 200px;
   list-style: none;
-}
-
-@media (max-width: 675px) {
-  .btpersonas,
-  .btempresas,
-  .btingresar,
-  .btcliente {
-    display: none;
-  }
-  .mapa-desktop {
-    display: none;
-  }
-  .mapa-phone {
-    display: initial;
-  }
 }
 
 /* COLUMNAS DEL DESPLEGABLE */
@@ -128,4 +115,22 @@ li {
 }
 .mapa-phone {
   display: none;
+}
+
+@media (max-width: 1000px) {
+  .btpersonas,
+  .btempresas,
+  .btingresar,
+  .btcliente {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .mapa-phone {
+    margin-top: 150px;
+    display: list-item;
+  }
+  .mapa-desktop {
+    display: none;
+  }
 }
