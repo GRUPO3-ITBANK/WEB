@@ -1,0 +1,18 @@
+.barra-colores {
+  z-index: 10;
+}
+
+#navbarNav {
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+}
+
+#Carrusel {
+  z-index: 0;
+  position: absolute;
+}
+
+.carousel-item {
+  max-height: 700px;
+}
