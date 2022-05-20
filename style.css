@@ -29,6 +29,9 @@
 
 .acceso-rapido-text {
   color: #fff;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
 }
 
 .acceso-rapido-lista li {
@@ -36,4 +39,7 @@
   display: inline-block;
   padding-left: 40px;
   padding-right: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
