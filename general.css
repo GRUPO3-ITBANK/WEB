@@ -24,17 +24,30 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: max-content;
   overflow-x: hidden;
-
-  min-height: 100vh;
   margin: 0;
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
+  max-height: 100%;
+  margin-top: 0px;
+  bottom: 0px;
   width: 100%;
   color: white;
   z-index: 1;
+  padding: 0px 0px 0px 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  clear: both;
+  position: relative;
+  margin-top: 0;
+  background-color: #585858;
+  border-width: 10px 0 0 0;
+  border-style: solid;
+  border-image-source: url("./images/linea-de-colores.png");
+  border-image-slice: 1;
+
+  overflow: hidden;
 }
 
 .bg-color {

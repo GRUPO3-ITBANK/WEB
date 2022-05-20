@@ -33,12 +33,14 @@
 
 #container-acceso-rapido {
   position: relative;
-  height: 100px;
+  min-height: max-content;
   min-width: 100%;
   padding: 0px 0px 0px 0px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  clear: both;
+  overflow: hidden;
 }
 
 .acceso-rapido-text {
