@@ -61,7 +61,7 @@
   text-align: center;
 }
 
-#li-accesorapido {
+.li-accesorapido {
   margin-top: 50px;
   display: inline-block;
   margin-left: 40px;
@@ -85,9 +85,27 @@
   }
   .acceso-rapido-fondo {
     background-color: #002c50;
-    height: 320px;
+    height: 160px;
     width: 100%;
     align-items: center;
+  }
+  .tamaño-iconos-acceso-rapido {
+    height: 32px;
+    width: 32px;
+  }
+}
+@media (max-width: 340px) {
+  .tamaño-iconos-acceso-rapido {
+    height: 25px;
+    width: 25px;
+  }
+}
+@media (max-width: 313px) {
+  .acceso-rapido-fondo {
+    height: 120px;
+  }
+  .acceso-rapido-text {
+    font-size: 10px;
   }
 }
 
@@ -99,8 +117,4 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.icon-tamaño {
-  size-adjust: 10px;
 }
