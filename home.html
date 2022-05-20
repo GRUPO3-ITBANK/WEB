@@ -5,23 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./recursos/bootstrap.min.css" />
-    <link rel="stylesheet" href="./general.css" />
     <link rel="stylesheet" href="./home.css" />
+
     <title>Document</title>
 </head>
 
 <body>
-
-    <header>
+    <header class="headerhome">
         <!-- NAVBAR -->
-        <nav class="navbar bg-color">
+        <nav class="navbar navbarhome bg-color">
             <div class="container-fluid">
-
                 <!-- LOGO -->
                 <a href="./index.html">
-                    <img class="logo" src="./images/LOGO.png" class="d-inline-block align-text-top" />
+                    <img class="logo logohome" src="./images/LOGO.png" class="d-inline-block align-text-top" />
                 </a>
-
                 <!--BOTON DEL DESPLEGABLE -->
                 <div>
                     <button class="navbar-toggler bg-light d-inline-block" type="button" data-bs-toggle="collapse"
@@ -31,15 +28,40 @@
                     </button>
                 </div>
             </div>
-
             <div>
                 <img class="barra-colores" src="./images/linea-de-colores.png" alt="" />
             </div>
         </nav>
     </header>
     <!-- FIN DE HEADER -->
-
-
+    <div id="sidebar" class="sidebar" style="width: 0px;">
+        <a href="#" class="boton-cerrar" onclick="ocultar()"><button id="cerrar" class="abrir-cerrar" href="#"
+                onclick="ocultar()" style="display: none;">Cerrar
+                menu</button></a>
+        <ul class="menu">
+            <li><a href="#">Opción 1</a></li>
+            <li><a href="#">Opción 2</a></li>
+            <li><a href="#">Opción 3</a></li>
+            <li><a href="#">Opción 4</a></li>
+            <li><a href="#">Opción 5</a></li>
+        </ul>
+    </div>
+    <div id="contenido" style="margin-left: 0px;">
+        <button id="abrir" class="abrir-cerrar" href="javascript:void(0)" onclick="mostrar()"
+            style="display: inline;">Abrir
+            menu
+        </button>
+        <button id="cerrar" class="abrir-cerrar" href="#" onclick="ocultar()" style="display: none;">Cerrar
+            menu
+        </button>
+    </div>
+    <script src="./javascripthome" />
+    </script>
+    <script defer=""
+        src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194"
+        integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw=="
+        data-cf-beacon="{&quot;rayId&quot;:&quot;70e782527bba9aef&quot;,&quot;version&quot;:&quot;2021.12.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;f0aa520dc035432cb9fe5438c4f03b8b&quot;,&quot;si&quot;:100}"
+        crossorigin="anonymous"></script>
 </body>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 
