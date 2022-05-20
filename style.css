@@ -11,35 +11,45 @@
 #Carrusel {
   z-index: 0;
   position: absolute;
+  width: 100%;
 }
 
 .carousel-item {
   max-height: 700px;
+  width: 100%;
+}
+
+#contenedor-carrusel {
+  min-width: 100%;
+  padding: 0px 0px 0px 0px;
 }
 
 .acceso-rapido-fondo {
-  margin-left: auto;
-  margin-right: auto;
   background-color: #002c50;
-  margin-top: 200px;
-  height: 133px;
-  width: 917px;
-  border-radius: 20px;
+  height: 200px;
+  width: 100%;
+  align-items: center;
+}
+
+#container-acceso-rapido {
+  position: relative;
+  height: 100px;
+  min-width: 100%;
+  padding: 0px 0px 0px 0px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .acceso-rapido-text {
   color: #fff;
-  margin-top: 10px;
   text-align: center;
   justify-content: center;
 }
 
-.acceso-rapido-lista li {
-  margin-top: 20px;
+#li-accesorapido {
+  margin-top: 50px;
   display: inline-block;
-  padding-left: 40px;
-  padding-right: 30px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  margin-left: 40px;
+  margin-right: 40px;
 }
