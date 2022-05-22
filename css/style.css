@@ -118,3 +118,18 @@
   align-items: center;
   text-align: center;
 }
+
+.card {
+  margin-top: 100px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-image {
+  height: 400px;
+}
+
+.espacio {
+  margin-top: 900px;
+}
