@@ -30,7 +30,7 @@ body {
   table-layout: fixed;
 }
 .bg-color {
-  background: #030303;
+  background: #000000;
 }
 footer {
   /* clear: both;
@@ -39,100 +39,64 @@ footer {
   bottom: 0px;
   border-width: 10px 0 0 0;
   border-style: solid;
-  border-image-source: url("./images/linea-de-colores.png");
+  border-image-source: url("./../images/linea-de-colores.png");
   border-image-slice: 1;
   overflow: hidden;
   z-index: 3;
   width: 100%;
 }
-
-.container-fluid {
-  padding: 0% 3% 0%;
-}
 .navbar {
-  /* border-width: 0 0 10px 0;
+  border-width: 0 0 10px 0;
   border-style: solid;
-  border-image-source: url("./images/linea-de-colores.png");
-  border-image-slice: 1; */
+  border-image-source: url("./../images/linea-de-colores.png");
+  border-image-slice: 1;
+  padding: 8px 0 0 0;
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
 }
+
+.container-fluid {
+  padding: 0% 8% 0%;
+}
+
 .logo {
   width: 200px;
   list-style: none;
 }
 
-/* COLUMNAS DEL DESPLEGABLE */
-
-#navbarNav {
-  position: absolute;
-  /* margin-right: 100px; */
-  margin-top: 0px;
-  float: right;
-  height: 100%;
-  width: 250px;
-  background-color: blue;
-  z-index: 99999;
-}
-
-p.subtitulo {
-  font-weight: bold;
-  text-align: left;
-}
-
-.nav-link {
-  color: #fff;
-}
-.nav-link active {
-  color: rgb(32, 68, 122);
-}
-.nav-item {
-  text-align: left;
-}
-
-li {
-  list-style: none;
-}
-
-.espacio {
-  min-width: 100%;
-  height: 100px;
-}
-/* ------------ */
-
 #dineroDisponible {
+  position: relative;
   height: 220px;
-  background: rgb(24, 24, 24);
+  background: rgb(255, 255, 255);
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
-}
-
-.btn-primary {
-  margin-left: 40px;
-  margin-right: 40px;
+  top: 50px;
 }
 
 /* DESPLEGABLE */
-
-.div-menu {
-  position: absolute;
-  min-width: 100%;
-  height: 100px;
+header {
+  background: black;
+  height: 84.4px;
+}
+.header-menu {
+  background-color: #000000;
+  color: #fff;
   display: flex;
   justify-content: flex-end;
+  width: 50%;
 }
-
-#btnMenu {
+#btn-menu {
   display: none;
 }
 
-#labelBtnMenu {
+header label {
   font-size: 30px;
   cursor: pointer;
+  margin-top: 10px;
   display: none;
 }
 
 .menu ul {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(0, 0, 0);
   display: flex;
   list-style: none;
 }
@@ -147,7 +111,7 @@ li {
 }
 
 .menu a:hover {
-  background: rgba(126, 18, 168, 0.3);
+  background: rgba(80, 176, 255, 0.575);
 }
 
 .menu a span {
@@ -157,4 +121,5 @@ li {
 .menu ul li:hover ul {
   display: block;
   position: absolute;
+  z-index: 9999;
 }
