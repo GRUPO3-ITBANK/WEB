@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  position: relative;
+  padding: 0 0 0 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    150deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(66, 66, 185, 1) 34%,
+    rgba(0, 212, 255, 1) 93%
+  );
+  background-attachment: fixed;
+  grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
+  margin: 0;
+  min-height: 200vh;
+  display: block;
+  table-layout: fixed;
+}
+.bg-color {
+  background: #030303;
+}
+footer {
+  /* clear: both;
+  position: relative; */
+  position: absolute;
+  bottom: 0px;
+  border-width: 10px 0 0 0;
+  border-style: solid;
+  border-image-source: url("./images/linea-de-colores.png");
+  border-image-slice: 1;
+  overflow: hidden;
+  z-index: 3;
+  width: 100%;
+}
+
+.container-fluid {
+  padding: 0% 3% 0%;
+}
+.navbar {
+  /* border-width: 0 0 10px 0;
+  border-style: solid;
+  border-image-source: url("./images/linea-de-colores.png");
+  border-image-slice: 1; */
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+}
+.logo {
+  width: 200px;
+  list-style: none;
+}
+
+/* COLUMNAS DEL DESPLEGABLE */
+
+#navbarNav {
+  position: absolute;
+  /* margin-right: 100px; */
+  margin-top: 0px;
+  float: right;
+  height: 100%;
+  width: 250px;
+  background-color: blue;
+  z-index: 99999;
+}
+
+p.subtitulo {
+  font-weight: bold;
+  text-align: left;
+}
+
+.nav-link {
+  color: #fff;
+}
+.nav-link active {
+  color: rgb(32, 68, 122);
+}
+.nav-item {
+  text-align: left;
+}
+
+li {
+  list-style: none;
+}
+
+.espacio {
+  min-width: 100%;
+  height: 100px;
+}
+/* ------------ */
+
+#dineroDisponible {
+  height: 220px;
+  background: rgb(24, 24, 24);
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.btn-primary {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* DESPLEGABLE */
+
+.div-menu {
+  position: absolute;
+  min-width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#btnMenu {
+  display: none;
+}
+
+#labelBtnMenu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu ul {
+  background-color: rgb(17, 17, 17);
+  display: flex;
+  list-style: none;
+}
+.menu ul ul {
+  display: none;
+}
+.menu a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: rgba(126, 18, 168, 0.3);
+}
+
+.menu a span {
+  margin-left: 10px;
+}
+
+.menu ul li:hover ul {
+  display: block;
+  position: absolute;
+}

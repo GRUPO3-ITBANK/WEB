@@ -7,37 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="./recursos/bootstrap.min.css" />
-  <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./general.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/general.css" />
 </head>
-
 <!-- ---BODY----- -->
 
 <body class>
-
   <!-- HEADER -->
   <header>
     <!-- NAVBAR -->
     <nav class="navbar bg-color">
       <div class="container-fluid">
-
         <!-- LOGO -->
         <a href="./index.html">
           <img class="logo" src="./images/LOGO.png" class="d-inline-block align-text-top" />
         </a>
         <!-- BOTONES NAV -->
-
         <a type="button" class="btn btn-outline-light btpersonas col-auto " href="#">Personas</a>
         <a type="button" class="btn btn-outline-light btempresas col col-auto" href="./indexE.html">Empresas</a>
         <a type="button" class="btn btn-outline-light btingresar col-1 offset-md-3 col-auto"
           href="./login.html">Ingresar</a>
         <a type="button" class="btn btn-outline-primary btcliente  col-auto" href="./register.html">Hacete
           Cliente</a>
-
-        <!-- BOTONES DEL HEADER -->
-
-
-
         <!--BOTON DEL DESPLEGABLE -->
         <div>
           <button class="navbar-toggler bg-dark d-inline-block" type="button" data-bs-toggle="collapse"
@@ -46,14 +37,9 @@
           </button>
         </div>
       </div>
-
-      <div>
-        <img class="barra-colores" src="./images/linea-de-colores.png" alt="" />
-      </div>
     </nav>
   </header>
   <!-- FIN DE HEADER -->
-
   <!-- INICIO DESPLEGABLE -->
   <div class="collapse navbar-collapse" id="navbarNav">
     <div class="row">
@@ -62,7 +48,7 @@
         <p class="subtitulo" : 0">Personas</p>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link" id="active" /*aria-current="page" href="#">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Cuentas y tarjetas</a>
@@ -73,7 +59,6 @@
         </ul>
       </div>
       <!-- -------2da columna------- -->
-
       <div class="col middlecolumn">
         <p class="subtitulo">Empresas</p>
         <ul class="navbar-nav">
@@ -83,7 +68,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Financiación</a>
           </li>
-
         </ul>
       </div>
       <!-- --------3era columna ------ -->
@@ -101,7 +85,6 @@
     </div>
   </div>
   <!-- FIN DESPLEGABLE -->
-
   <!-- Carrusel -->
   <div class="container car" id="contenedor-carrusel">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -243,7 +226,6 @@
 
   <!-- Footer -->
   <footer class="footer text-center text-lg-start bg-black">
-    <!-- <img class="barra-coloresdown" src="./images/linea-de-colores.png" alt=""> -->
     <section class="">
 
       <div class="container text-center text-md-start mt-1">

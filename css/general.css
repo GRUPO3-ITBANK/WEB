@@ -39,7 +39,7 @@ footer {
   bottom: 0px;
   border-width: 10px 0 0 0;
   border-style: solid;
-  border-image-source: url("./images/linea-de-colores.png");
+  border-image-source: url("./../images/linea-de-colores.png");
   border-image-slice: 1;
   overflow: hidden;
   z-index: 3;
@@ -49,18 +49,16 @@ footer {
   display: block;
 }
 
-img.barra-colores {
-  position: absolute;
-  width: 100%;
-  height: 10px;
-  left: 0px;
-  top: 98%;
-  z-index: 2;
-}
 .container-fluid {
   padding: 0% 3% 0%;
 }
-
+.navbar {
+  border-width: 0 0 10px 0;
+  border-style: solid;
+  border-image-source: url("./../images/linea-de-colores.png");
+  border-image-slice: 1;
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+}
 .logo {
   width: 200px;
   list-style: none;
@@ -69,32 +67,34 @@ img.barra-colores {
 /* COLUMNAS DEL DESPLEGABLE */
 
 .navbar-collapse.collapse.show {
-  background-color: #5590c7;
+  background-color: #232324;
   width: 100%;
 }
 
 .middlecolumn {
   padding-top: 20px;
-  background-color: #245e93;
+  background-color: #000000;
   padding-left: 2%;
 }
 .besidecolumns {
   padding-left: 3%;
   padding-top: 20px;
-  background-color: #5590c7;
+  background-color: #232324;
 }
 
 p.subtitulo {
   font-weight: bold;
   text-align: left;
+  color: white;
 }
 
 .nav-link {
   color: #fff;
 }
-.nav-link active {
-  color: rgb(32, 68, 122);
+.active {
+  color: aquamarine;
 }
+
 .nav-item {
   text-align: left;
 }
