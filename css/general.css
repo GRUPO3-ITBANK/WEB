@@ -25,7 +25,7 @@ body {
   grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
   margin: 0;
-  min-height: 200vh;
+  min-height: 100vh;
   display: block;
   table-layout: fixed;
 }
@@ -45,22 +45,25 @@ footer {
   z-index: 3;
   width: 100%;
 }
-footer {
-  display: block;
+@media (max-height: 1300px) {
+  footer {
+    position: relative;
+  }
 }
 
 .container-fluid {
   padding: 0% 3% 0%;
 }
 .navbar {
-  border-width: 0 0 10px 0;
+  /* border-width: 0 0 10px 0;
   border-style: solid;
   border-image-source: url("./../images/linea-de-colores.png");
-  border-image-slice: 1;
+  border-image-slice: 1; */
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+  height: 56px;
 }
 .logo {
-  width: 200px;
+  width: 130px;
   list-style: none;
 }
 
@@ -68,18 +71,20 @@ footer {
 
 .navbar-collapse.collapse.show {
   background-color: #232324;
-  width: 100%;
+  display: flex;
 }
 
 .middlecolumn {
   padding-top: 20px;
   background-color: #000000;
   padding-left: 2%;
+  display: flex;
 }
 .besidecolumns {
   padding-left: 3%;
   padding-top: 20px;
   background-color: #232324;
+  display: flex;
 }
 
 p.subtitulo {
@@ -100,10 +105,6 @@ p.subtitulo {
 }
 /* -------- */
 
-.white {
-  color: #fff;
-}
-
 li {
   list-style: none;
 }
@@ -113,7 +114,7 @@ li {
   height: 200px;
 }
 .espacio1 {
-  height: 50px;
+  height: 300px;
 }
 .idiomas {
   margin-left: 70%;

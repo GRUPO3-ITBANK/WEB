@@ -25,7 +25,7 @@ body {
   grid-template-rows: auto 1fr auto;
   overflow-x: hidden;
   margin: 0;
-  min-height: 200vh;
+  min-height: 100vh;
   display: block;
   table-layout: fixed;
 }
@@ -36,7 +36,7 @@ footer {
   /* clear: both;
   position: relative; */
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   border-width: 10px 0 0 0;
   border-style: solid;
   border-image-source: url("./../images/linea-de-colores.png");
@@ -45,13 +45,19 @@ footer {
   z-index: 3;
   width: 100%;
 }
+@media (max-height: 1000px) {
+  footer {
+    position: relative;
+  }
+}
 
 .container-fluid {
+  height: 56px;
   padding: 0% 3% 0%;
 }
 
 .logo {
-  width: 200px;
+  width: 130px;
   list-style: none;
 }
 
@@ -59,17 +65,23 @@ footer {
   height: 55px;
   min-width: 100%;
 }
-
+.espacio1 {
+  height: 300px;
+}
 /* DESPLEGABLE */
 header {
   background: black;
-  height: 100px;
+  height: 56px;
   border-width: 0 0 10px 0;
   border-style: solid;
   border-image-source: url("./../images/linea-de-colores.png");
   border-image-slice: 1;
   padding: 0px 0 0 0;
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+}
+.navbar {
+  height: 56px;
+  --bs-navbar-padding-y: 0.5;
 }
 .header-menu {
   background-color: #000000;
@@ -89,19 +101,25 @@ header label {
   display: none;
 }
 
+.menu {
+  height: 50px;
+  top: 0;
+}
+
 .menu ul {
   background-color: rgb(0, 0, 0);
   display: flex;
   list-style: none;
-  padding: 0 0 0 0;
+  padding: 10px 0 0 0;
 }
+
 .menu ul ul {
   display: none;
   background-color: rgb(15, 15, 15);
 }
 .menu a {
   display: block;
-  padding: 15px 20px;
+  padding: 0px 20px;
   color: #fff;
   text-decoration: none;
 }
@@ -112,6 +130,7 @@ header label {
 
 .menu a span {
   margin-left: 10px;
+  right: 5px;
 }
 
 .menu ul li:hover ul {
@@ -126,7 +145,7 @@ header label {
   }
   .menu {
     position: absolute;
-    top: 89px;
+    top: 56px;
     left: 0;
     width: 100%;
     z-index: 9999999;
