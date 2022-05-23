@@ -1,5 +1,34 @@
-.barra-colores {
-  z-index: 10;
+.nav-mid-column {
+  width: 80%;
+  height: 45px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-ul {
+  padding-top: 8px;
+  height: fit-content;
+  display: inline;
+}
+.liNav {
+  display: inline;
+  padding-right: 9px;
+  font-size: 18px;
+  color: white;
+  padding-right: 40px;
+}
+.btsNav {
+  padding-top: 8px;
+  display: inline;
+  position: relative;
+}
+.btn {
+  display: inline;
+  font-size: 13px;
+  background-color: #0b5ed7(46, 46, 46);
+  border-radius: 14px;
+  border: 1px solid rgb(17, 40, 90);
+  --bs-btn-hover-bg: #121314;
 }
 
 #navbarNav {
@@ -25,7 +54,7 @@
 }
 
 .acceso-rapido-fondo {
-  background-color: #002c50;
+  background-color: #00277c;
   height: 200px;
   width: 100%;
   align-items: center;
@@ -84,7 +113,7 @@
     display: inline;
   }
   .acceso-rapido-fondo {
-    background-color: #002c50;
+    background-color: #00277c;
     height: 160px;
     width: 100%;
     align-items: center;
@@ -132,4 +161,8 @@
 
 .espacio {
   margin-top: 900px;
+}
+
+.navbar-toggler {
+  position: relative;
 }
