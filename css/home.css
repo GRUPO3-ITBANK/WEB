@@ -45,17 +45,9 @@ footer {
   z-index: 3;
   width: 100%;
 }
-.navbar {
-  border-width: 0 0 10px 0;
-  border-style: solid;
-  border-image-source: url("./../images/linea-de-colores.png");
-  border-image-slice: 1;
-  padding: 8px 0 0 0;
-  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
-}
 
 .container-fluid {
-  padding: 0% 8% 0%;
+  padding: 0% 3% 0%;
 }
 
 .logo {
@@ -63,19 +55,21 @@ footer {
   list-style: none;
 }
 
-#dineroDisponible {
-  position: relative;
-  height: 220px;
-  background: rgb(255, 255, 255);
-  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-  top: 50px;
+.espacio {
+  height: 55px;
+  min-width: 100%;
 }
 
 /* DESPLEGABLE */
 header {
   background: black;
-  height: 84.4px;
+  height: 100px;
+  border-width: 0 0 10px 0;
+  border-style: solid;
+  border-image-source: url("./../images/linea-de-colores.png");
+  border-image-slice: 1;
+  padding: 0px 0 0 0;
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
 }
 .header-menu {
   background-color: #000000;
@@ -99,9 +93,11 @@ header label {
   background-color: rgb(0, 0, 0);
   display: flex;
   list-style: none;
+  padding: 0 0 0 0;
 }
 .menu ul ul {
   display: none;
+  background-color: rgb(15, 15, 15);
 }
 .menu a {
   display: block;
@@ -111,7 +107,7 @@ header label {
 }
 
 .menu a:hover {
-  background: rgba(80, 176, 255, 0.575);
+  background: rgb(43, 109, 207);
 }
 
 .menu a span {
@@ -122,4 +118,214 @@ header label {
   display: block;
   position: absolute;
   z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  header label {
+    display: block;
+  }
+  .menu {
+    position: absolute;
+    top: 89px;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+  }
+  .menu ul {
+    display: block;
+  }
+  .menu ul li:hover ul {
+    display: none;
+    position: static;
+    background-color: rgb(15, 15, 15);
+  }
+  .menu a span {
+    position: absolute;
+    right: 5px;
+  }
+  #btn-menu:checked ~ .menu {
+    transform: translateX(0%);
+  }
+  .menu ul ul a {
+    padding: 15px 40px;
+  }
+}
+
+/* ------------------------- */
+.col {
+  width: 100%;
+  display: flex;
+  position: relative;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0px 200px 100px 200px;
+}
+
+#A {
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  min-height: max-content;
+}
+#padre-dineroDisponible {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding: 0px 20px;
+}
+#hijo-dineroDisponible {
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+}
+#textTusaldo {
+  font-size: large;
+}
+.botones-A {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  padding: 0px 10px;
+  width: 100%;
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+a.button4 {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.2s;
+}
+.ul-botones {
+  width: 100%;
+}
+
+.liB {
+  display: inline;
+  margin-right: 2px;
+}
+
+@media all and (max-width: 30em) {
+  a.button4 {
+    display: block;
+    margin: 2px;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 1120px) {
+  .botones-A {
+    text-align: center;
+  }
+  .btB {
+    margin-right: 1px;
+    display: inline-block;
+  }
+}
+
+/* -------------------------------- */
+
+#B {
+  display: grid;
+  position: relative;
+  width: 50%;
+  min-height: max-content;
+}
+
+#padre-ultimosmovimientos {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+  text-align: center;
+}
+#hijo-ultimosmovimientos {
+  width: 100%;
+  height: 100%;
+  background-color: aliceblue;
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  margin: 0px auto;
+  justify-content: center;
+  padding: 10px 10px 10px 10px;
+  top: 0;
+}
+
+.ultimosmovimientos1 {
+  border: 0.826626px solid #000000;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+#textUltimosMov {
+  font-size: large;
+}
+
+.divisor-movimientos {
+  width: 80%;
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+  .col {
+    display: block;
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+  #A {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+  }
+  #B {
+    width: 100%;
+    height: 600px;
+    text-align: center;
+  }
+  #padre-ultimosmovimientos {
+    position: relative;
+    height: 400px;
+    width: 85%;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px 20px;
+  }
+
+  #padre-dineroDisponible {
+    position: relative;
+    height: 220px;
+    width: 85%;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px 20px;
+  }
+  #hijo-dineroDisponible {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    justify-content: center;
+    padding: 10px 10px 10px 10px;
+  }
 }

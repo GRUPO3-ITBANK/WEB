@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="./recursos/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/fontello.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -17,7 +19,6 @@
                 <a href=" ./index.html ">
                     <img class=" logo " src=" ./images/LOGO.png " class=" d-inline-block align-text-top " />
                 </a>
-
                 <div class="header-menu">
                     <input type="checkbox" id="btn-menu">
                     <label for="btn-menu" class="icon-menu"></label>
@@ -32,7 +33,7 @@
                                     <li><a href="#">Sub item4</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Item3<span class="icon-down-open"></span></a>
+                            <li class="submenu"><a href="#">Item3<span class="icon-down-open"></span></a>
                                 <ul>
                                     <li><a href="#">Sub item1</a></li>
                                     <li><a href="#">Sub item2</a></li>
@@ -47,42 +48,61 @@
             </div>
         </nav>
     </header>
-    <!-- <div class="div-menu">
 
-        </div> -->
+    <div class="col">
+        <div class="espacio"></div>
 
+        <div class="col-md7" id="A">
 
+            <div class="dinero-disponible col-12 md-5 " id="padre-dineroDisponible">
+                <div class="col" id="hijo-dineroDisponible">
+                    <div class="columna-saldo text-center">
+                        <h2 class="fw-bold text-center" id="textTusaldo">TU SALDO</h2>
+                        <h2 style="font-size:large;">$<span id="spnSaldo"></span></h2>
+                    </div>
+                </div>
+            </div>
 
+            <div class="botones-A">
+                <ul class="ul-botones">
+                    <li class="liB"></li><a href="something" class="button4" style="background-color:#f14e4e">Button
+                        1</a></li>
+                    <li class="liB"></li><a href="something" class="button4" style="background-color:#f1bb4e">Button
+                        2</a></li>
+                    <li class="liB"><a href="something" class="button4" style="background-color:#84f14e">Button 3</a>
+                    </li>
 
-    <div class="espacio"></div>
+                </ul>
+            </div>
 
-    <div class=" column">
-        <div class="col-12" style="padding:0 30 0 30;">
-            <div class="dinero-disponible p-4 md-5 ">
-                <div class="row align-items-stretch">
-                    <div class="col p-5" id="dineroDisponible">
-                        <div class="columna-saldo text-center">
-                            <h2 class="fw-bold text-center" style="margin-top: -40px;">TU SALDO</h2>
-                            <h2>$<span id="spnSaldo"></span></h2>
-                        </div>
-                        <div class="columna-saldo-botones mb-3 text-center align-content-lg-center boton-sesion">
-                            <a class="btn btn-primary" href="#" role="button">Link</a>
-                            <button class="btn btn-primary" type="submit">Button</button>
-                            <input class="btn btn-primary" type="button" value="Input">
-                            <input class="btn btn-primary" type="submit" value="Submit">
-                            <input class="btn btn-primary" type="reset" value="Reset">
-                        </div>
+        </div>
+
+        <div class="col-md5" id="B">
+
+            <div class="dinero-disponible col-12  md-5 " id="padre-ultimosmovimientos">
+                <div class="col" id="hijo-ultimosmovimientos">
+                    <div class="columna-saldo text-center">
+                        <h2 class="fw-bold text-center" id="textUltimosMov">Ultimos movimientos</h2>
+                    </div>
+
+                    <div class="divisor-movimientos">
+
+                    </div>
+                    <div class="divisor-movimientos">
+
+                    </div>
+                    <div class="divisor-movimientos">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="espacio"></div>
     <!-- Footer -->
 </body>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
-<script src="./javascript/home.js"></script>
+<script src="./javascript/menu.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </html>
