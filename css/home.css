@@ -37,7 +37,7 @@ footer {
   position: relative; */
   position: absolute;
   bottom: 0;
-  border-width: 10px 0 0 0;
+  border-width: 5px 0 0 0;
   border-style: solid;
   border-image-source: url("./../images/linea-de-colores.png");
   border-image-slice: 1;
@@ -72,14 +72,16 @@ footer {
 header {
   background: black;
   height: 56px;
-  border-width: 0 0 10px 0;
-  border-style: solid;
-  border-image-source: url("./../images/linea-de-colores.png");
-  border-image-slice: 1;
+
   padding: 0px 0 0 0;
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
 }
 .navbar {
+  border-width: 0 0 5px 0;
+  border-style: solid;
+  border-image-source: url("./../images/linea-de-colores.png");
+  border-image-slice: 1;
+
   height: 56px;
   --bs-navbar-padding-y: 0.5;
 }
@@ -102,7 +104,7 @@ header label {
 }
 
 .menu {
-  height: 50px;
+  height: 30px;
   top: 0;
 }
 
@@ -125,7 +127,7 @@ header label {
 }
 
 .menu a:hover {
-  background: rgb(43, 109, 207);
+  background: rgb(23, 25, 27);
 }
 
 .menu a span {

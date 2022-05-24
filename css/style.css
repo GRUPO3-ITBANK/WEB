@@ -1,5 +1,6 @@
 .nav-mid-column {
-  width: 80%;
+  left: 0;
+  width: 70%;
   height: 45px;
   position: relative;
   display: flex;
@@ -161,8 +162,4 @@
 
 .espacio {
   margin-top: 900px;
-}
-
-.navbar-toggler {
-  position: relative;
 }
