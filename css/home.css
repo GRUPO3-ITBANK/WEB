@@ -89,6 +89,7 @@ header {
   display: flex;
   justify-content: flex-end;
   width: 50%;
+  margin-right: 50px;
 }
 #btn-menu {
   display: none;
@@ -347,4 +348,91 @@ a.button4 {
     justify-content: center;
     padding: 10px 10px 10px 10px;
   }
+}
+
+/*------USUARIO NAME------*/
+
+.action-p {
+  position: fixed;
+  top: 10px;
+  right: 25px;
+}
+.action-p .profile-p {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.action-p .profile-p img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action-p .menu-p {
+  position: absolute;
+  top: 60px;
+  right: -15px;
+  padding: 10px 0px;
+  background: rgb(255, 255, 255);
+  width: 180px;
+  box-sizing: 05px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.action-p .menu-p h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: #2b2b2b;
+  line-height: 1.2em;
+}
+
+.action-p .menu-p.active-p {
+  visibility: visible;
+  opacity: 1;
+}
+
+.action-p .menu-p::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.action-p .menu-p ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  direction: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action-p .menu-p ul li:hover img {
+  opacity: 1;
+}
+.action-p .menu-p ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.action-p .menu-p ul li::hover a {
+  color: rgb(255, 0, 0);
 }
