@@ -10,7 +10,10 @@ html {
   min-height: 100%;
   position: relative;
 }
-
+.row {
+  margin-right: 0;
+  --bs-gutter-x: 0;
+}
 body {
   position: relative;
   padding: 0 0 0 0;
@@ -45,9 +48,18 @@ footer {
   z-index: 3;
   width: 100%;
 }
-@media (max-height: 1300px) {
+.footer.text-center.text-lg-start.bg-black {
+  margin-right: 0;
+  padding: 0 0 0 0;
+}
+@media (max-height: 1200px) {
   footer {
     position: relative;
+  }
+}
+@media (max-height: 850px) {
+  .nav-mid-column {
+    display: none;
   }
 }
 
@@ -86,14 +98,6 @@ li {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  .btpersonas,
-  .btempresas,
-  .btingresar,
-  .btcliente {
-    display: none;
-  }
-}
 @media (max-width: 600px) {
   .mapa-phone {
     margin-top: 150px;

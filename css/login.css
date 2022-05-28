@@ -1,7 +1,9 @@
 form {
   margin-top: 60px;
 }
-
+.row {
+  margin-right: 0;
+}
 .inicio-sesion {
   margin-left: 90px;
 }
@@ -17,9 +19,9 @@ form {
 }
 
 .login.container {
-  margin-top: 100px;
+  margin-top: 80px;
   width: 600px;
-  height: 600px;
+  height: max-content;
   background: #fff;
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
   border-radius: 18px;
@@ -72,7 +74,7 @@ form {
   .register.container,
   .login.container,
   .cambiar-clave.container {
-    width: 450px;
+    width: 90%;
   }
 }
 
@@ -83,3 +85,130 @@ form {
   margin-left: 50%;
 }
 */
+.form-select {
+  padding: 10px;
+}
+.login__input {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  padding: 10px;
+}
+.login__input:focus {
+  border: 3px solid #0075ff;
+  outline: none;
+  box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
+
+.login__grupo-input {
+  position: relative;
+}
+.login__input-error {
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+}
+.login__input-error-activo {
+  display: block;
+}
+.login__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.login__grupo-btn-enviar {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  padding: 15px;
+}
+.login__grupo-btn-registrarse {
+  display: inline-block;
+  position: relative;
+  align-items: center;
+  padding: 10px;
+}
+
+.login__btn {
+  height: 35px;
+  line-height: 40px;
+  font-size: small;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.1s ease all;
+  padding: 0 20px;
+}
+.login__btn-registrar {
+  background-color: #2e3944;
+}
+.login__btn-ingresar {
+  background-color: #000000;
+  padding: 0 30px;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+/* FORMULARIO ENVIADO EXITOSAMENTE */
+
+.login__mensaje-exito {
+  font-size: 14px;
+  color: #119200;
+  display: none;
+}
+
+.login__mensaje-exito-activo {
+  display: block;
+}
+
+.login__grupo-correcto .login__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.login__grupo-incorrecto .login__label {
+  color: #bb2929;
+}
+
+.login__grupo-incorrecto .login__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.login__grupo-incorrecto .login__input {
+  border: 3px solid #bb2929;
+}
+
+/* ----- -----  Mediaqueries ----- ----- */
+@media screen and (max-width: 800px) {
+  .login {
+    grid-template-columns: 1fr;
+  }
+
+  .login__mensaje,
+  .formulario__grupo-btn-enviar {
+    grid-column: 1;
+  }
+
+  .login__btn {
+    width: 100%;
+  }
+}

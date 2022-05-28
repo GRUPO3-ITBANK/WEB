@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./css/login.css" />
   <link rel="stylesheet" href="./css/general.css" />
   <link rel="stylesheet" href="./css/fontello.css">
+
 </head>
 <!-- ---BODY----- -->
 
@@ -59,37 +60,58 @@
   <!--LOGIN-->
   <div class="row">
     <div class="col-12">
-      <div class="login container p-4 md-5 bg-light">
+      <div class="login container md-5 bg-light">
         <div class="row align-items-stretch">
           <div class="col p-5">
             <h2 class="fw-bold text-center">INICIAR SESION</h2>
             <!--Forms-->
-            <form action="#" id="inicio-sesion">
+            <form action="#" id="login">
               <div class="mb-4">
                 <label for="user" class="form-label">Elige la forma de iniciar sesión</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Usuario</option>
-                  <option value="1">DNI</option>
-                  <option value="2">Pasaporte</option>
+                <select class="form-select" id="select" aria-label="Default select example"
+                  onchange="cambiarIdentificacion();">
+                  <option selected value="USER">Usuario</option>
+                  <option value="DNI">DNI</option>
+                  <option value="PAS">Pasaporte</option>
                 </select>
               </div>
-              <div class="mb-4">
-                <label for="user" class="form-label">Identificación</label>
-                <input type="user" id="usernameLogin" class="form-control" name="user" />
+              <!-- IDENTIFICACION -->
+              <div class="login__grupo mb-4" id="grupo__identificacion">
+                <label for="identificacion" class="login__label">Identificación</label>
+                <div class="login__grupo-input">
+                  <input id="identificacion" class="login__input" name="identificacion" />
+                  <i class="login__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="login__input-error">Formato invalido</p>
               </div>
-              <div class="mb-4">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" name="passwpord" />
+              <!-- PASSWORD -->
+              <div class="login__grupo mb-4" id="grupo__password">
+                <label for="password" class="login__label">Contraseña</label>
+                <div class="login__grupo-input">
+                  <input type="password" class="login__input" name="password" />
+                  <i class="login__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="login__input-error">Formato de contraseña inválido</p>
               </div>
-              <div class="mb-3 text-center align-content-lg-center boton-sesion">
-                <a href="./register.html" class="btn btn-secondary registrarse">
-                  REGISTRARTE</a>
 
-                <a href="./home.html" class="btn btn-primary my-3 inicio-sesion">
-                  INICIAR SESION
-                </a>
-              </div>
-              <a href="./recuperar-clave.html" class="olvide-clave">Olvide mi clave</a>
+              <div class="login__grupo mb-3 text-center align-content-lg-center boton-sesion">
+
+                <div class="login__grupo login__grupo-btn">
+                  <div class="login__grupo login__grupo-btn-registrarse">
+                    <button href="./register.html" class="login__btn login__btn-registrar">REGISTRARTE</button>
+                  </div>
+                  <div class="login__grupo login__grupo-btn-enviar">
+                    <button type="submit" class="login__btn login__btn-ingresar">INGRESAR</button>
+                    <p class="login__mensaje-exito" id="login__mensaje-exito">Formulario enviado exitosamente!
+                    </p>
+                  </div>
+
+
+
+                  <p>
+                    <a href="./recuperar-clave.html" class="olvide-clave">Olvide mi clave</a>
+                  </p>
+                </div>
             </form>
           </div>
         </div>
@@ -169,8 +191,10 @@
 
   </footer>
 </body>
+<script src="./javascript/login.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 <script src="./javascript/menu.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 </html>
