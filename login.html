@@ -80,16 +80,16 @@
                 <label for="identificacion" class="login__label">Identificación</label>
                 <div class="login__grupo-input">
                   <input id="identificacion" class="login__input" name="identificacion" />
-                  <i class="login__validacion-estado fas fa-times-circle"></i>
+                  <i class="login__validacion-estado fas"></i>
                 </div>
-                <p class="login__input-error">Formato invalido</p>
               </div>
+
               <!-- PASSWORD -->
               <div class="login__grupo mb-4" id="grupo__password">
                 <label for="password" class="login__label">Contraseña</label>
                 <div class="login__grupo-input">
-                  <input type="password" class="login__input" name="password" />
-                  <i class="login__validacion-estado fas fa-times-circle"></i>
+                  <input type="password" class="login__input" name="password" id="password" />
+                  <i class="login__validacion-estado fas"></i>
                 </div>
                 <p class="login__input-error">Formato de contraseña inválido</p>
               </div>
@@ -98,12 +98,13 @@
 
                 <div class="login__grupo login__grupo-btn">
                   <div class="login__grupo login__grupo-btn-registrarse">
-                    <button href="./register.html" class="login__btn login__btn-registrar">REGISTRARTE</button>
+                    <button onclick="location.href='./register.html'" type=button
+                      class="login__btn login__btn-registrar">REGISTRARTE</button>
                   </div>
                   <div class="login__grupo login__grupo-btn-enviar">
-                    <button type="submit" class="login__btn login__btn-ingresar">INGRESAR</button>
-                    <p class="login__mensaje-exito" id="login__mensaje-exito">Formulario enviado exitosamente!
-                    </p>
+                    <button type="submit" id="submit"
+                      class="login__btn login__btn-ingresar ingresar-inactivo">INGRESAR</button>
+
                   </div>
 
 

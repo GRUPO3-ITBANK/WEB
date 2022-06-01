@@ -5,132 +5,158 @@ const expresiones = {
   usuario: /^[a-zA-Z0-9\_\-]{4,16}$/,
   dni: /^[0-9]{4,15}$/,
   pasaporte: /^[a-zA-Z0-9]{4,16}$/,
-  password: /^.{4,12}$/,
+  password: /^.{7,16}$/,
 };
+const campos = {
+  usuario: false,
+  dni: false,
+  pasaporte: false,
+  password: false,
+};
+
+function validarCampo(expresion, e, grupo, grupocorrecto, campo) {
+  if (expresion.test(e.target.value)) {
+    $(grupo).addClass(grupocorrecto);
+    $(grupo + " i").addClass("fa-check-circle");
+    campos[campo] = true;
+  } else {
+    $(grupo).removeClass(grupocorrecto);
+    $(grupo + " i").removeClass("fa-check-circle");
+    campos[campo] = false;
+  }
+}
 
 const validarFormulario = (e) => {
   switch (e.target.name) {
     case "identificacion":
       if ($("#select").val() == "DNI") {
-        if (expresiones.dni.test(e.target.value)) {
-          //saco que era incorrecto
-          document
-            .getElementById("grupo__identificacion")
-            .classList.remove("login__grupo-incorrecto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.remove("fa-times-circle");
-
-          // agrego grupo correcto
-          document
-            .getElementById("grupo__identificacion")
-            .classList.add("login__grupo-correcto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.add("fa-check-circle");
-        } else {
-          //o sea si no cumple...
-          //le agrego grupo incorrecto y remuevo el correcto
-          document
-            .getElementById("grupo__identificacion")
-            .classList.add("login__grupo-incorrecto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.add("fa-times-circle");
-          document
-            .getElementById("grupo__identificacion")
-            .classList.remove("login__grupo-correcto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.remvoe("fa-check-circle");
-
-          document
-            .querySelector("#grupo__identificacion .login__input-error")
-            .classList.add("formulario__input-error-activo");
-        }
+        validarCampo(
+          expresiones.dni,
+          e,
+          "#grupo__identificacion",
+          "login__grupo-correcto",
+          "dni"
+        );
       } else if ($("#select").val() == "USER") {
-        document
-          .getElementById("grupo__identificacion")
-          .classList.remove("login__grupo-incorrecto");
-        document
-          .querySelector("#grupo__identificacion i")
-          .classList.remove("fa-times-circle");
-
-        if (expresiones.usuario.test(e.target.value)) {
-          //si cumple...
-          //saco grupo incorrecto y agrego grupo correcto
-          document
-            .getElementById("grupo__identificacion")
-            .classList.remove("login__grupo-incorrecto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.remove("fa-times-circle");
-          document
-            .getElementById("grupo__identificacion")
-            .classList.add("login__grupo-correcto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.add("fa-check-circle");
-        } else {
-          document
-            .getElementById("grupo__identificacion")
-            .classList.add("login__grupo-incorrecto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.add("fa-times-circle");
-        }
+        validarCampo(
+          expresiones.usuario,
+          e,
+          "#grupo__identificacion",
+          "login__grupo-correcto",
+          "usuario"
+        );
       } else if ($("#select").val() == "PAS") {
-        document
-          .getElementById("grupo__identificacion")
-          .classList.remove("login__grupo-incorrecto");
-        document
-          .querySelector("#grupo__identificacion i")
-          .classList.remove("fa-times-circle");
-
-        if (expresiones.pasaporte.test(e.target.value)) {
-          //si cumple...
-          //saco grupo incorrecto y agrego grupo correcto
-          document
-            .getElementById("grupo__identificacion")
-            .classList.remove("login__grupo-incorrecto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.remove("fa-times-circle");
-          document
-            .getElementById("grupo__identificacion")
-            .classList.add("login__grupo-correcto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.add("fa-check-circle");
-        } else {
-          document
-            .getElementById("grupo__identificacion")
-            .classList.add("login__grupo-incorrecto");
-          document
-            .querySelector("#grupo__identificacion i")
-            .classList.add("fa-times-circle");
-        }
+        validarCampo(
+          expresiones.pasaporte,
+          e,
+          "#grupo__identificacion",
+          "login__grupo-correcto",
+          "pasaporte"
+        );
       }
       break;
-
     case "password":
-      console.log("funciona password");
+      validarCampo(
+        expresiones.password,
+        e,
+        "#grupo__password",
+        "login__grupo-correcto",
+        "password"
+      );
       break;
   }
 };
 
+let element = document.getElementById("submit");
+element.classList.contains("ingresar-inactivo");
+
+function activaboton() {
+  if ($("#select").val() == "USER") {
+    if (campos.usuario && campos.password) {
+      if (element.classList.contains("ingresar-inactivo")) {
+        $("#submit").removeClass("ingresar-inactivo");
+      }
+    } else {
+      if (!element.classList.contains("ingresar-inactivo")) {
+        $("#submit").addClass("ingresar-inactivo");
+      }
+    }
+  }
+  if ($("#select").val() == "DNI") {
+    if (campos.dni && campos.password) {
+      if (element.classList.contains("ingresar-inactivo")) {
+        $("#submit").removeClass("ingresar-inactivo");
+      }
+    } else {
+      if (!element.classList.contains("ingresar-inactivo")) {
+        $("#submit").addClass("ingresar-inactivo");
+      }
+    }
+  }
+  if ($("#select").val() == "PAS") {
+    if (campos.pasaporte && campos.password) {
+      if (element.classList.contains("ingresar-inactivo")) {
+        $("#submit").removeClass("ingresar-inactivo");
+      }
+    } else {
+      if (!element.classList.contains("ingresar-inactivo")) {
+        $("#submit").addClass("ingresar-inactivo");
+      }
+    }
+  }
+}
+
+const habilitarBoton = (e) => {
+  switch (e.target.name) {
+    case "identificacion":
+      activaboton();
+      break;
+
+    case "password":
+      activaboton();
+      break;
+  }
+};
+
+function Clear() {
+  console.log("entra");
+  $("#identificacion").removeClass("fa-check-circle");
+  $("#password").removeClass("fa-check-circle");
+}
+
+function cambiarIdentificacion() {
+  console.log("entra1");
+  Clear();
+  document
+    .getElementById("select")
+    .addEventListener("change", validarFormulario);
+
+  document.getElementById("select").addEventListener("change", activaboton);
+}
+
 inputs.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
   input.addEventListener("blur", validarFormulario);
+  input.addEventListener("keyup", habilitarBoton);
+  input.addEventListener("blur", habilitarBoton);
 });
 
 login.addEventListener("submit", (e) => {
   e.preventDefault();
-});
 
-function cambiarIdentificacion() {
   if ($("#select").val() == "DNI") {
-    $("#usernameLogin").attr("maxlength", 10);
-  } else if ($("#select").val() == "PAS") {
+    if (campos.dni && campos.password) {
+      login.reset();
+    }
   }
-}
+  if ($("#select").val() == "USER") {
+    if (campos.usuario && campos.password) {
+      login.reset();
+    }
+  }
+  if ($("#select").val() == "PAS") {
+    if (campos.pasaporte && campos.password) {
+      login.reset();
+    }
+  }
+});
