@@ -118,27 +118,21 @@ const habilitarBoton = (e) => {
   }
 };
 
-function Clear() {
-  console.log("entra");
-  $("#identificacion").removeClass("fa-check-circle");
-  $("#password").removeClass("fa-check-circle");
+function limpiarCampos() {
+  $("#submit").addClass("ingresar-inactivo");
+  $("#grupo__identificacion i").removeClass("fa-check-circle");
+  $("#identificacion").val("");
 }
 
 function cambiarIdentificacion() {
-  console.log("entra1");
-  Clear();
-  document
-    .getElementById("select")
-    .addEventListener("change", validarFormulario);
-
-  document.getElementById("select").addEventListener("change", activaboton);
+  limpiarCampos();
 }
 
 inputs.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
-  input.addEventListener("blur", validarFormulario);
   input.addEventListener("keyup", habilitarBoton);
-  input.addEventListener("blur", habilitarBoton);
+  input.addEventListener("change", validarFormulario);
+  input.addEventListener("change", habilitarBoton);
 });
 
 login.addEventListener("submit", (e) => {

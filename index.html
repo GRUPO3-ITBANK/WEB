@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/fontello.css">
   <link rel="stylesheet" href="./css/general.css" />
-  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 </head>
 <!-- ---BODY----- -->
 
@@ -26,38 +26,42 @@
         </a>
         <!-- BOTONES NAV -->
         <div class="nav-mid-column">
-          <ul class="nav-ul">
-            <li class="liNav"><a>PERSONAS</a></li>
-            <li class="liNav"><a>EMPRESAS</a></li>
-          </ul>
-          <ul class="btsNav">
-            <li style="display:inline;"><a class="btn btn-primary" style="--bs-btn-bg: #71abff; ">INGRESA</a></li>
-            <li style="display:inline; margin-left:30px;"><a class="btn btn-primary">HACETE CLIENTE</a></li>
-          </ul>
+          <div>
+            <a href="./index.html" class="ap personas">PERSONAS</a>
+            <a href="./indexE.html" class="ap empresas">EMPRESAS</a>
+          </div>
+          <div class="btsNav">
+            <a style="display:inline; --bs-btn-bg: #71abff;" class="btn btn-primary" href="./login.html">INGRESA</a>
+            <a style="display:inline; margin-left:30px;" class="btn btn-primary" href="./register.html">HACETE
+              CLIENTE</a>
+          </div>
         </div>
         <div class="header-menu">
           <input type="checkbox" id="btn-menu">
           <label for="btn-menu" class="icon-menu"></label>
           <nav class="menu">
             <ul>
-              <li><a href="#">Item1</a></li>
-              <li class="submenu"><a href="#">Item2<span class="icon-down-open"></span></a>
+              <li><a href="./login.html">Ingresar a banca online</a></li>
+              <li><a href="./register.html">Hacerme Cliente</a></li>
+              <li class="submenu"><a href="#">Personas<span class="icon-down-open"></span></a>
                 <ul>
-                  <li><a href="#">Sub item1</a></li>
-                  <li><a href="#">Sub item2</a></li>
-                  <li><a href="#">Sub item3</a></li>
-                  <li><a href="#">Sub item4</a></li>
+                  <li><a href="./index.html">Inicio</a></li>
+                  <li><a href="#">Tarjetas</a></li>
+                  <li><a href="#">Prestamos</a></li>
+                  <li><a href="#">Inversiones</a></li>
+                  <li><a href="#">Seguros y asistencias</a></li>
                 </ul>
               </li>
-              <li class="submenu"><a href="#">Item3<span class="icon-down-open"></span></a>
+              <li class="submenu"><a href="#">Empresas<span class="icon-down-open"></span></a>
                 <ul>
-                  <li><a href="#">Sub item1</a></li>
-                  <li><a href="#">Sub item2</a></li>
-                  <li><a href="#">Sub item3</a></li>
-                  <li><a href="#">Sub item4</a></li>
+                  <li><a href="./indexE.html">Inicio</a></li>
+                  <li><a href="#">Tarjetas</a></li>
+                  <li><a href="#">Financiación</a></li>
+                  <li><a href="#">Seguros</a></li>
+                  <li><a href="#">Corporativas</a></li>
                 </ul>
               </li>
-              <li><a href="#">Item4</a></li>
+              <li><a href="#">Atención al cliente</a></li>
             </ul>
           </nav>
         </div>
@@ -184,29 +188,7 @@
       </div>
     </div>
   </div>
-  <!---->
 
-  <!--MAPA-->
-  <!-- <div class="contenedormapa">
-    <div class="text-center my-5 mapa-desktop">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.2450911363617!2d-58.405997816450245!3d-34.64232164689174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335326563a44b%3A0x687ed059ee29af95!2sITBA%20Sede%20Rectorado!5e0!3m2!1ses-419!2sar!4v1652889666062!5m2!1ses-419!2sar"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-    <div class="text-center my-6 mapa-phone">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1641.2450911363617!2d-58.405997816450245!3d-34.64232164689174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335326563a44b%3A0x687ed059ee29af95!2sITBA%20Sede%20Rectorado!5e0!3m2!1ses-419!2sar!4v1652889666062!5m2!1ses-419!2sar"
-        width="250" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </div>
-
-  <div class="espacio"></div> -->
-  <!---->
-
-
-  <!-- Cards-->
 
   <div class="card mb-3">
     <img src="images\card1.jpg" class="card-img-top card-image" alt="...">
@@ -309,6 +291,7 @@
   </footer>
 
 </body>
+<script type="text/javascript" src="./recursos/jquery-1.11.3.min.js"></script>
 <script src="./javascript/menu.js"></script>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 
