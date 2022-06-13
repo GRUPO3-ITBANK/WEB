@@ -9,16 +9,23 @@
 }
 
 .ap {
-  position: absolute;
+  text-decoration: none;
+  color: rgb(99, 172, 231);
   display: inline-block;
+  font-weight: 400;
   flex-wrap: nowrap;
-  margin-top: 10px;
-  font-size: 15px;
-  color: white;
-  margin-left: 10px;
+}
+.personas {
+  flex-wrap: nowrap;
+  position: relative;
+  top: 10px;
+  left: 20px;
 }
 .empresas {
-  padding-left: 90px;
+  padding-left: 40px;
+  position: absolute;
+  top: 10px;
+  flex-wrap: nowrap;
 }
 .btsNav {
   padding-top: 8px;
