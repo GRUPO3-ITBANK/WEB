@@ -27,38 +27,7 @@
 
                 <div class="header-menu text-white ">
                     <input type="checkbox" id="btn-menu">
-                    <label for="btn-menu" class="icon-menu" style="margin-top:0px" id="toggle-btn"
-                        data-toggle="collapse" data-target="#toggle-example"></label>
-                    <nav class="menu" id="toggle-example">
-                        <ul>
-                            <li class="submenu"><a href="#">Mis Productos<span class="icon-down-open"></span></a>
-                                <ul>
-                                    <li><a href="#">Sub item1</a></li>
-                                    <li><a href="#">Sub item2</a></li>
-                                    <li><a href="#">Sub item3</a></li>
-                                    <li><a href="#">Sub item4</a></li>
-                                </ul>
-                            </li>
-                            <li class="submenu"><a href="#">Cuentas<span class="icon-down-open"></span></a>
-                                <ul>
-                                    <li><a href="#">Sub item1</a></li>
-                                    <li><a href="#">Sub item2</a></li>
-                                    <li><a href="#">Sub item3</a></li>
-                                    <li><a href="#">Sub item4</a></li>
-                                </ul>
-                            </li>
-                            <li class="submenu"><a href="#">Tarjetas<span class="icon-down-open"></span></a>
-                                <ul>
-                                    <li><a href="#">Sub item1</a></li>
-                                    <li><a href="#">Sub item2</a></li>
-                                    <li><a href="#">Sub item3</a></li>
-                                    <li><a href="#">Sub item4</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Inversiones y Seguros</a></li>
-                            <li><a href="#">Contacto</a></li>
-                        </ul>
-                    </nav>
+                    <label for="btn-menu" class="icon-menu" onclick="desplegarHamburguesa()"></label>
                 </div>
 
                 <div class="action-p">
@@ -84,7 +53,39 @@
 
         </nav>
     </header>
-
+    <nav id="menu" class="menu menu-inactive">
+        <ul>
+            <li class="idSubmenu" onclick="desplegarSubmenu('submenu1')"><a href="#">Mis Productos<span
+                        class="icon-down-open"></span></a>
+                <ul id="submenu1" class="submenu submenu-inactive">
+                    <li><a href="#">Sub item1</a></li>
+                    <li><a href="#">Sub item2</a></li>
+                    <li><a href="#">Sub item3</a></li>
+                    <li><a href="#">Sub item4</a></li>
+                </ul>
+            </li>
+            <li class="idSubmenu" onclick="desplegarSubmenu('submenu2')"><a href="#">Cuentas<span
+                        class="icon-down-open"></span></a>
+                <ul id="submenu2" class="submenu submenu-inactive">
+                    <li><a href="#">Sub item1</a></li>
+                    <li><a href="#">Sub item2</a></li>
+                    <li><a href="#">Sub item3</a></li>
+                    <li><a href="#">Sub item4</a></li>
+                </ul>
+            </li>
+            <li class="idSubmenu" onclick="desplegarSubmenu('submenu3')"><a href="#">Tarjetas<span
+                        class="icon-down-open"></span></a>
+                <ul id="submenu3" class="submenu submenu-inactive">
+                    <li><a href="#">Sub item1</a></li>
+                    <li><a href="#">Sub item2</a></li>
+                    <li><a href="#">Sub item3</a></li>
+                    <li><a href="#">Sub item4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Inversiones y Seguros</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
     <div class="col">
         <div class="espacio"></div>
 
@@ -99,17 +100,6 @@
                 </div>
             </div>
 
-            <div class="botones-A col-12 md-5">
-                <ul class="ul-botones">
-                    <li class="liB"></li><a href="something" class="button4" style="background-color:#f14e4e">Button
-                        1</a></li>
-                    <li class="liB"></li><a href="something" class="button4" style="background-color:#f1bb4e">Button
-                        2</a></li>
-                    <li class="liB"><a href="something" class="button4" style="background-color:#84f14e">Button 3</a>
-                    </li>
-
-                </ul>
-            </div>
 
         </div>
 
@@ -210,7 +200,6 @@
 </body>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 <script src="./javascript/menu.js"></script>
-<script type="text/javascript" src="./recursos/jquery-1.11.3.min.js"></script>
 <script src="/javascript/home.js"></script>
 
 </html>

@@ -7,8 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="./recursos/bootstrap.min.css" />
-  <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/general.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
   <link rel="stylesheet" href="./css/fontello.css">
 </head>
 
@@ -29,13 +30,14 @@
 
         <div class="header-menu">
           <input type="checkbox" id="btn-menu">
-          <label for="btn-menu" class="icon-menu"></label>
-          <nav class="menu">
+          <label for="btn-menu" class="icon-menu" onclick="desplegarHamburguesa()"></label>
+          <nav id="menu" class="menu menu-inactive">
             <ul>
               <li><a href="./login.html">Ingresar a banca online</a></li>
               <li><a href="./register.html">Hacerme Cliente</a></li>
-              <li class="submenu"><a href="#">Personas<span class="icon-down-open"></span></a>
-                <ul>
+              <li class="idSubmenu" onclick="desplegarSubmenu('submenu1')"><a href="#">Personas<span
+                    class="icon-down-open"></span></a>
+                <ul id="submenu1" class="submenu-inactive">
                   <li><a href="./index.html">Inicio</a></li>
                   <li><a href="#">Tarjetas</a></li>
                   <li><a href="#">Prestamos</a></li>
@@ -43,9 +45,11 @@
                   <li><a href="#">Seguros y asistencias</a></li>
                 </ul>
               </li>
-              <li class="submenu"><a href="#">Empresas<span class="icon-down-open"></span></a>
-                <ul>
-                  <li><a href="./indexE.html">Inicio</a></li>
+              <li class="idSubmenu" onclick="desplegarSubmenu('submenu2')"><a href="#">Empresas<span
+                    class="icon-down-open"></span></a>
+                <ul id="submenu2" class="submenu submenu-inactive">
+                  <li><a href="./indexE.html">Inicio</a>
+                  </li>
                   <li><a href="#">Tarjetas</a></li>
                   <li><a href="#">Financiación</a></li>
                   <li><a href="#">Seguros</a></li>
@@ -101,6 +105,8 @@
       </button>
     </div>
   </div>
+
+  <div class="espacio"></div>
   <!-- Footer -->
   <footer class="footer text-center text-lg-start bg-black">
     <section class="">
@@ -172,8 +178,7 @@
 
   </footer>
 </body>
-<script src="./recursos/bootstrap.bundle.min.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 <script src="./javascript/menu.js"></script>
 
