@@ -36,11 +36,11 @@
                             alt="">
                     </div>
                     <div class="menu-p">
-                        <h3 id="UserNameLogged">Usuario</h3>
+                        <h3 id="UserNameLogged">NOMBRE</h3>
                         <ul>
-                            <li> <a href="#">My Perfil</a></li>
+                            <li> <a href="#">Mi perfil</a></li>
                             <li> <a href="#">Configuración</a></li>
-                            <li> <a href="#">Ayuda</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -99,18 +99,23 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
         <div class="col-12 md-5" id="B">
-
             <div class="dinero-disponible col-12  md-5 " id="padre-ultimosmovimientos">
                 <div class="col" id="hijo-ultimosmovimientos">
-                    <div class="columna-saldo text-center">
-                        <h2 class="fw-bold text-center" id="textUltimosMov">Ultimos movimientos</h2>
+                    <div class="container-fluid cont-select-movimientos">
+                        <h2 class="fw-bold" id="textUltimosMov">Ultimos movimientos</h2>
+                        <select class="form-select select-movimientos" id="select" aria-label="Default select example"
+                            onchange="">
+                            <option selected value="x">x1</option>
+                            <option value="x2">x2</option>
+                            <option value="x3">x3</option>
+                        </select>
                     </div>
+                    <div id="Movimientos">
 
+                    </div>
+                    <!-- 
                     <div class="divisor-movimientos">
 
                     </div>
@@ -119,16 +124,19 @@
                     </div>
                     <div class="divisor-movimientos">
 
-                    </div>
+                    </div> -->
+                    <button type="submit" id="addmov" class="btn btn-success" onclick="agregarMov()">+</button>
                 </div>
             </div>
         </div>
+
     </div>
+
     <div class="espacio1"></div>
-    <!-- Footer -->
+
 
     <!-- Footer -->
-    <footer class="footer text-center text-lg-start bg-black">
+    <footer class="footer text-center text-lg-start bg-color">
         <section class="">
 
             <div class="container text-center text-md-start mt-1">
@@ -200,6 +208,7 @@
 </body>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 <script src="./javascript/menu.js"></script>
+<script src="./javascript/movimientos.js"></script>
 <script src="/javascript/home.js"></script>
 
 </html>

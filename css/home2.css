@@ -106,8 +106,7 @@ a.button4 {
 }
 #hijo-ultimosmovimientos {
   width: 100%;
-  height: 100%;
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   margin: 0px auto;
@@ -123,17 +122,19 @@ a.button4 {
 
 #textUltimosMov {
   font-size: large;
+  width: 40%;
+  padding: 5px;
 }
 
 .divisor-movimientos {
   width: 80%;
-  height: 30%;
-  background-color: rgba(0, 0, 0, 0.25);
+  height: max-content;
+  border-radius: 5px;
+  background-color: rgba(144, 144, 144, 0.25);
 }
 
 @media (max-width: 768px) {
   .col {
-    display: block;
     width: 100%;
     padding: 0 0 0 0;
   }
@@ -173,6 +174,9 @@ a.button4 {
     justify-content: center;
     padding: 10px 10px 10px 10px;
   }
+  #textUltimosMov {
+    font-size: small;
+  }
 }
 
 /*------USUARIO NAME------*/
@@ -210,7 +214,7 @@ a.button4 {
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
-  z-index: 1;
+  z-index: 999999999999;
   box-shadow: -2px 2px 7px #2b2b2b79;
 }
 
@@ -261,4 +265,24 @@ a.button4 {
 
 .action-p .menu-p ul li::hover a {
   color: rgb(255, 0, 0);
+}
+
+.cont-select-movimientos {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 35px;
+  display: flex;
+  margin: 0px 30px 30px 30px;
+}
+
+.select-movimientos {
+  width: 40%;
+  font-size: unset;
+}
+#Movimientos {
+  width: 100%;
+  text-align: -webkit-center;
+}
+ul {
+  list-style: none;
 }

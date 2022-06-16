@@ -1,5 +1,6 @@
 const login = document.getElementById("login");
 const inputs = document.querySelectorAll("#login input");
+let select = document.getElementById("select");
 
 const expresiones = {
   usuario: /^[a-zA-Z0-9\_\-]{4,16}$/,
@@ -14,28 +15,22 @@ const campos = {
   password: false,
 };
 
-function validarCampo(expresion, e, grupo, grupocorrecto, campo) {
+function validarCampo(expresion, e, grupo, claseGrupoCorrecto, campo) {
+  let idGrupo = document.getElementById(grupo);
   if (expresion.test(e.target.value)) {
-    document.getElementById(grupo).classList.add(grupocorrecto);
-    document
-      .getElementById(grupo)
-      .querySelector("i")
-      .classList.add("fa-check-circle");
+    idGrupo.classList.add(claseGrupoCorrecto);
+    idGrupo.querySelector("i").classList.add("fa-check-circle");
     campos[campo] = true;
   } else {
-    document.getElementById(grupo).classList.add(grupocorrecto);
-    document
-      .getElementById(grupo)
-      .querySelector("i")
-      .classList.remove("fa-check-circle");
+    idGrupo.classList.add(claseGrupoCorrecto);
+    idGrupo.querySelector("i").classList.remove("fa-check-circle");
     campos[campo] = false;
   }
 }
-
 const validarFormulario = (e) => {
   switch (e.target.name) {
     case "identificacion":
-      if (document.getElementById("select").value == "DNI") {
+      if (select.value == "DNI") {
         validarCampo(
           expresiones.dni,
           e,
@@ -43,7 +38,7 @@ const validarFormulario = (e) => {
           "login__grupo-correcto",
           "dni"
         );
-      } else if (document.getElementById("select").value == "USER") {
+      } else if (select.value == "USER") {
         validarCampo(
           expresiones.usuario,
           e,
@@ -51,7 +46,7 @@ const validarFormulario = (e) => {
           "login__grupo-correcto",
           "usuario"
         );
-      } else if (document.getElementById("select").value == "PAS") {
+      } else if (select.value == "PAS") {
         validarCampo(
           expresiones.pasaporte,
           e,
@@ -73,40 +68,40 @@ const validarFormulario = (e) => {
   }
 };
 
-let element = document.getElementById("submit");
-element.classList.contains("ingresar-inactivo");
+let submit = document.getElementById("submit");
+submit.classList.contains("ingresar-inactivo");
 
 function activaboton() {
-  if (document.getElementById("select").value == "USER") {
+  if (select.value == "USER") {
     if (campos.usuario && campos.password) {
-      if (element.classList.contains("ingresar-inactivo")) {
-        document.getElementById("submit").classList.remove("ingresar-inactivo");
+      if (submit.classList.contains("ingresar-inactivo")) {
+        submit.classList.remove("ingresar-inactivo");
       }
     } else {
-      if (!element.classList.contains("ingresar-inactivo")) {
-        document.getElementById("submit").classList.add("ingresar-inactivo");
+      if (!submit.classList.contains("ingresar-inactivo")) {
+        submit.classList.add("ingresar-inactivo");
       }
     }
   }
-  if (document.getElementById("select").value == "DNI") {
+  if (select.value == "DNI") {
     if (campos.dni && campos.password) {
-      if (element.classList.contains("ingresar-inactivo")) {
-        document.getElementById("submit").classList.remove("ingresar-inactivo");
+      if (submit.classList.contains("ingresar-inactivo")) {
+        submit.classList.remove("ingresar-inactivo");
       }
     } else {
       if (!element.classList.contains("ingresar-inactivo")) {
-        document.getElementById("submit").classList.add("ingresar-inactivo");
+        submit.classList.add("ingresar-inactivo");
       }
     }
   }
-  if (document.getElementById("select").value == "PAS") {
+  if (select.value == "PAS") {
     if (campos.pasaporte && campos.password) {
-      if (element.classList.contains("ingresar-inactivo")) {
-        document.getElementById("submit").classList.remove("ingresar-inactivo");
+      if (submit.classList.contains("ingresar-inactivo")) {
+        submit.classList.remove("ingresar-inactivo");
       }
     } else {
-      if (!element.classList.contains("ingresar-inactivo")) {
-        document.getElementById("submit").classList.add("ingresar-inactivo");
+      if (submit.classList.contains("ingresar-inactivo")) {
+        submit.classList.add("ingresar-inactivo");
       }
     }
   }
@@ -125,7 +120,7 @@ const habilitarBoton = (e) => {
 };
 
 function limpiarCampos() {
-  document.getElementById("submit").classList.add("ingresar-inactivo");
+  submit.classList.add("ingresar-inactivo");
   document
     .getElementById("grupo__identificacion")
     .querySelector("i")
@@ -147,17 +142,17 @@ inputs.forEach((input) => {
 
 login.addEventListener("submit", (e) => {
   e.preventDefault();
-  if (document.getElementById("select").value == "DNI") {
+  if (select.value == "DNI") {
     if (campos.dni && campos.password) {
       login.reset();
     }
   }
-  if (document.getElementById("select").value == "USER") {
+  if (select.value == "USER") {
     if (campos.usuario && campos.password) {
       login.reset();
     }
   }
-  if (document.getElementById("select").value == "PAS") {
+  if (select.value == "PAS") {
     if (campos.pasaporte && campos.password) {
       login.reset();
     }

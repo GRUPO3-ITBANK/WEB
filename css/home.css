@@ -30,7 +30,7 @@ body {
   table-layout: fixed;
 }
 .bg-color {
-  background: #000000;
+  background: #141414;
 }
 footer {
   /* clear: both;
@@ -74,6 +74,7 @@ footer {
   min-width: 100%;
 }
 .espacio1 {
+  position: relative;
   height: 300px;
 }
 /* DESPLEGABLE */
@@ -102,7 +103,7 @@ header label {
   display: none;
 }
 .menu ul {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(47, 47, 47);
   display: flex;
   list-style: none;
   padding: 5px 5px 5px 5px;
@@ -162,10 +163,10 @@ header label {
     display: block;
   }
   .menu ul ul {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(0, 0, 0);
     position: relative;
     display: block;
-    border-radius: 6px;
+    border-radius: 1px;
   }
   .submenu-inactive * {
     display: none;
@@ -176,7 +177,7 @@ header label {
 
   .menu ul {
     display: block;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(24, 24, 24);
     list-style: none;
     padding: 10px 0 0 0;
   }
@@ -194,5 +195,8 @@ header label {
   .menu li a:hover {
     background-color: rgb(44, 48, 52);
     color: rgb(127, 161, 255);
+  }
+  #textUltimosMov {
+    font-size: small;
   }
 }
