@@ -11,7 +11,9 @@ function traerDatosDolar() {
         if (parseInt(c.casa.venta) > 0 && parseInt(c.casa.compra) > 0) {
           let contenedor = document.getElementById("apartadoDolar");
           let ul = document.createElement("ul");
+          ul.classList = "ul-dolar";
           let liNombre = document.createElement("li");
+          liNombre.classList = "dolar-title";
           let liVenta = document.createElement("li");
           let liCompra = document.createElement("li");
           liNombre.textContent = c.casa.nombre;
