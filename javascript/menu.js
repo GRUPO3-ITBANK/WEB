@@ -1,3 +1,7 @@
+let submenu1 = document.getElementById("submenu1");
+let submenu2 = document.getElementById("submenu2");
+let submenu3 = document.getElementById("submenu3");
+
 function desplegarHamburguesa() {
   let desplegable = document.getElementById("menu");
 
@@ -10,8 +14,11 @@ function desplegarHamburguesa() {
   }
 }
 
+document.addEventListener("click", () => {
+  submenu1.classList.remove();
+});
+
 function desplegarSubmenu(desplegable) {
-  console.log(desplegable);
   function toggle(desplegable) {
     if (desplegable.classList.contains("submenu-active")) {
       desplegable.classList.remove("submenu-active");
@@ -22,16 +29,37 @@ function desplegarSubmenu(desplegable) {
       desplegable.classList.add("slide-in-top");
     }
   }
+  function cierreDemasDesplegables(d1, d2) {
+    d1.classList.remove("submenu-active");
+    d1.classList.add("submenu-inactive");
+    d2.classList.remove("submenu-active");
+    d2.classList.add("submenu-inactive");
+  }
 
   if (desplegable == "submenu1") {
-    let desplegable = document.getElementById("submenu1");
+    let desplegable = submenu1;
     toggle(desplegable);
+    cierreDemasDesplegables(submenu2, submenu3);
   } else if (desplegable == "submenu2") {
     let desplegable = document.getElementById("submenu2");
     toggle(desplegable);
+    cierreDemasDesplegables(submenu1, submenu3);
   } else if (desplegable == "submenu3") {
     let desplegable = document.getElementById("submenu3");
-    console.log(desplegable);
     toggle(desplegable);
+    cierreDemasDesplegables(submenu1, submenu2);
   }
 }
+
+document.addEventListener("click", function (e) {
+  if (document.getElementById("menu").contains(e.target)) {
+    return;
+  } else {
+    submenu1.classList.remove("submenu-active");
+    submenu1.classList.add("submenu-inactive");
+    submenu2.classList.remove("submenu-active");
+    submenu2.classList.add("submenu-inactive");
+    submenu3.classList.remove("submenu-active");
+    submenu3.classList.add("submenu-inactive");
+  }
+});

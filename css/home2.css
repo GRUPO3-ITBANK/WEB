@@ -1,0 +1,300 @@
+/* ------------------------- */
+.col {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 80px 420px 100px 400px;
+}
+
+#A {
+  display: grid;
+  position: relative;
+  width: 50%;
+  height: max-content;
+}
+#padre-dineroDisponible {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  right: 0;
+  top: 0;
+  text-align: center;
+  padding: 0px 20px;
+  min-height: 100vh;
+}
+#hijo-dineroDisponible {
+  width: 100%;
+  height: auto;
+  background: rgb(255, 255, 255);
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 30px;
+}
+#textTusaldo {
+  font-size: large;
+  display: flex;
+  padding: 5px 20px;
+}
+.botones-A {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  padding: 0px 10px;
+  width: 100%;
+  height: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+a.button4 {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.2s;
+}
+.ul-botones {
+  width: 100%;
+}
+
+.liB {
+  display: inline;
+  margin-right: 2px;
+}
+
+@media all and (max-width: 30em) {
+  a.button4 {
+    display: block;
+    margin: 2px;
+  }
+}
+
+@media all and (min-width: 501px) and (max-width: 1120px) {
+  .botones-A {
+    text-align: center;
+  }
+  .btB {
+    margin-right: 1px;
+    display: inline-block;
+  }
+  .col {
+    padding: 80px 50px 100px 50px;
+  }
+}
+@media all and (min-width: 1120px) and (max-width: 1600px) {
+  .col {
+    padding: 80px 50px 100px 50px;
+  }
+}
+
+/* -------------------------------- */
+
+#B {
+  display: grid;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  min-height: max-content;
+}
+
+#padre-ultimosmovimientos {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+#hijo-ultimosmovimientos {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  margin: 0px auto;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
+  top: 0;
+}
+
+.ultimosmovimientos1 {
+  border: 0.826626px solid #000000;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+#textUltimosMov {
+  font-size: small;
+  width: 40%;
+  padding: 5px;
+  display: flex;
+}
+
+.divisor-movimientos {
+  width: 80%;
+  height: max-content;
+  border-radius: 5px;
+  background-color: rgba(144, 144, 144, 0.25);
+}
+
+@media (max-width: 768px) {
+  .col {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+  #A {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top: 40px;
+  }
+  #B {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #padre-ultimosmovimientos {
+    position: relative;
+    width: 85%;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px 20px;
+  }
+
+  #padre-dineroDisponible {
+    position: relative;
+    width: 85%;
+    text-align: center;
+    margin: 0px auto;
+    padding: 0px 20px;
+    min-height: min-content;
+  }
+  #hijo-dineroDisponible {
+    width: 100%;
+    height: max-content;
+    background: rgb(255, 255, 255);
+    box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    justify-content: center;
+  }
+  #textUltimosMov {
+    font-size: smallER;
+  }
+}
+
+/*------USUARIO NAME------*/
+
+.action-p {
+  top: 10px;
+  right: 25px;
+}
+.action-p .profile-p {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.action-p .profile-p img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.action-p .menu-p {
+  position: absolute;
+  top: 70px;
+  right: 15px;
+  padding: 10px 0px;
+  background: rgb(255, 255, 255);
+  width: 180px;
+  box-sizing: 05px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: auto;
+  box-shadow: -2px 2px 7px #2b2b2b79;
+}
+
+.action-p .menu-p h3 {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+  color: #2b2b2b;
+  line-height: 1.2em;
+}
+
+.action-p .menu-p.active-p {
+  visibility: visible;
+  opacity: 1;
+  z-index: auto;
+}
+
+.action-p .menu-p::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 28px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+.action-p .menu-p ul li {
+  list-style: none;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  direction: flex;
+  align-items: center;
+  justify-content: center;
+}
+.action-p .menu-p ul li:hover img {
+  opacity: 1;
+}
+.action-p .menu-p ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: 0.5s;
+}
+
+.action-p .menu-p ul li::hover a {
+  color: rgb(255, 0, 0);
+}
+
+.cont-select-movimientos {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  height: 35px;
+  display: flex;
+  margin: 0px 0px 5px 0px;
+}
+
+.select-movimientos {
+  width: 40%;
+  font-size: unset;
+}
+#Movimientos {
+  width: 100%;
+  text-align: -webkit-center;
+  overflow-y: scroll;
+}
+ul {
+  list-style: none;
+}

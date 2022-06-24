@@ -10,7 +10,7 @@ function recogeDatos(e) {
 
 let miForm = document.querySelector("#inicio-sesion");
 
-miForm.addEventListener("submit", recogeDatos);
+// miForm.addEventListener("submit", recogeDatos);
 
 //Perfil
 function menuToggle() {
