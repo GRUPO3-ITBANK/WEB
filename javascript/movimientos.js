@@ -19,6 +19,7 @@ if (movimientos.length == 0) {
 }
 
 function agregarMov() {
+  fixAltura();
   if (movimientos.length == 8) {
     document.getElementById("Movimientos").style.height =
       document.getElementById("Movimientos").clientHeight;
@@ -65,5 +66,21 @@ function agregarMov() {
     contenedor.innerHTML = divAux.innerHTML;
   } else if (movimientos.length > 1) {
     contenedor.prepend(div);
+  }
+}
+
+function fixAltura() {
+  let alturaDeA = document.getElementById(
+    "padre-dineroDisponible"
+  ).clientHeight;
+  let alturaDeB = document.getElementById(
+    "padre-ultimosmovimientos"
+  ).clientHeight;
+  if (alturaDeB >= alturaDeA) {
+    document.getElementById("padre-dineroDisponible").style.minHeight =
+      alturaDeB;
+  } else if (alturaDeB < alturaDeA) {
+    document.getElementById("padre-ultimosmovimientos").style.minHeight =
+      alturaDeA;
   }
 }

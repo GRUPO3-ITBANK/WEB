@@ -43,6 +43,7 @@ footer {
   z-index: 3;
   width: 100%;
   height: 260px;
+  bottom: 0;
 }
 @media (max-height: 1000px) {
   footer {
