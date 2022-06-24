@@ -1,4 +1,5 @@
 let movimientos = [];
+//Funcion para fixxear altura de la pagina
 
 //chequeo si la lista aun no tiene objetos
 if (movimientos.length == 0) {
@@ -18,6 +19,10 @@ if (movimientos.length == 0) {
 }
 
 function agregarMov() {
+  if (movimientos.length == 8) {
+    document.getElementById("Movimientos").style.height =
+      document.getElementById("Movimientos").clientHeight;
+  }
   //div contenedor donde se pushean todos los movimientos
   let contenedor = document.getElementById("Movimientos");
   //creo div y le asigno clase

@@ -3,17 +3,15 @@
   width: 100%;
   display: flex;
   position: relative;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0px 200px 100px 200px;
+  padding: 80px 420px 100px 400px;
 }
 
 #A {
   display: grid;
   position: relative;
-  height: 100%;
   width: 50%;
-  min-height: max-content;
+  height: max-content;
 }
 #padre-dineroDisponible {
   position: relative;
@@ -23,18 +21,22 @@
   top: 0;
   text-align: center;
   padding: 0px 20px;
+  min-height: 100vh;
 }
 #hijo-dineroDisponible {
   width: 100%;
-  height: 100%;
+  height: auto;
   background: rgb(255, 255, 255);
   box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   justify-content: center;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 30px;
 }
 #textTusaldo {
   font-size: large;
+  display: flex;
+  padding: 5px 20px;
 }
 .botones-A {
   position: relative;
@@ -87,6 +89,14 @@ a.button4 {
     margin-right: 1px;
     display: inline-block;
   }
+  .col {
+    padding: 80px 50px 100px 50px;
+  }
+}
+@media all and (min-width: 1120px) and (max-width: 1600px) {
+  .col {
+    padding: 80px 50px 100px 50px;
+  }
 }
 
 /* -------------------------------- */
@@ -94,13 +104,13 @@ a.button4 {
 #B {
   display: grid;
   position: relative;
+  height: 100%;
   width: 50%;
   min-height: max-content;
 }
 
 #padre-ultimosmovimientos {
   position: absolute;
-  height: 400px;
   width: 100%;
   text-align: center;
 }
@@ -111,7 +121,7 @@ a.button4 {
   border-radius: 6px;
   margin: 0px auto;
   justify-content: center;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 0px 10px 0px;
   top: 0;
 }
 
@@ -121,9 +131,10 @@ a.button4 {
 }
 
 #textUltimosMov {
-  font-size: large;
+  font-size: small;
   width: 40%;
   padding: 5px;
+  display: flex;
 }
 
 .divisor-movimientos {
@@ -140,17 +151,17 @@ a.button4 {
   }
   #A {
     width: 100%;
-    height: 300px;
     text-align: center;
+    margin-bottom: 100px;
+    margin-top: 40px;
   }
   #B {
     width: 100%;
-    height: 600px;
     text-align: center;
+    margin-bottom: 40px;
   }
   #padre-ultimosmovimientos {
     position: relative;
-    height: 400px;
     width: 85%;
     text-align: center;
     margin: 0px auto;
@@ -159,23 +170,22 @@ a.button4 {
 
   #padre-dineroDisponible {
     position: relative;
-    height: 220px;
     width: 85%;
     text-align: center;
     margin: 0px auto;
     padding: 0px 20px;
+    min-height: min-content;
   }
   #hijo-dineroDisponible {
     width: 100%;
-    height: 100%;
+    height: max-content;
     background: rgb(255, 255, 255);
     box-shadow: 9px 9px 9px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     justify-content: center;
-    padding: 10px 10px 10px 10px;
   }
   #textUltimosMov {
-    font-size: small;
+    font-size: smallER;
   }
 }
 
@@ -214,7 +224,7 @@ a.button4 {
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
-  z-index: 999999999999;
+  z-index: auto;
   box-shadow: -2px 2px 7px #2b2b2b79;
 }
 
@@ -232,6 +242,7 @@ a.button4 {
 .action-p .menu-p.active-p {
   visibility: visible;
   opacity: 1;
+  z-index: auto;
 }
 
 .action-p .menu-p::before {
@@ -272,7 +283,7 @@ a.button4 {
   justify-content: space-between;
   height: 35px;
   display: flex;
-  margin: 0px 30px 30px 30px;
+  margin: 0px 0px 5px 0px;
 }
 
 .select-movimientos {
@@ -282,6 +293,7 @@ a.button4 {
 #Movimientos {
   width: 100%;
   text-align: -webkit-center;
+  overflow-y: scroll;
 }
 ul {
   list-style: none;
