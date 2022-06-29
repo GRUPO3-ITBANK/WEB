@@ -1,5 +1,4 @@
 let movimientos = [];
-//Funcion para fixxear altura de la pagina
 
 //chequeo si la lista aun no tiene objetos
 if (movimientos.length == 0) {
@@ -8,18 +7,16 @@ if (movimientos.length == 0) {
   //creo div y le asigno clase
   let div = document.createElement("div");
   div.className = "divisor-movimientos";
-  //creo elementos que voy a asignar más adelante
   let liTexto = document.createElement("li");
-  let ul2 = document.createElement("ul");
-
+  let ul = document.createElement("ul");
   liTexto.textContent = "Todavía no has realizado ningún movimiento... :)";
-  ul2.append(liTexto);
-  div.append(ul2);
+  ul.append(liTexto);
+  div.append(ul);
   contenedor.append(div);
 }
 
 function agregarMov() {
-  fixAltura();
+  // fixAltura();
   if (movimientos.length == 8) {
     document.getElementById("Movimientos").style.height =
       document.getElementById("Movimientos").clientHeight;
@@ -29,8 +26,9 @@ function agregarMov() {
   //creo div y le asigno clase
   let div = document.createElement("div");
   div.className = "divisor-movimientos";
+  div.setAttribute("onclick", "mostrar('overlay')");
   //creo elementos que voy a asignar más adelante
-  let ul2 = document.createElement("ul");
+  let ul = document.createElement("ul");
   let liFecha = document.createElement("li");
   let liTexto = document.createElement("li");
   let liMetodoPago = document.createElement("li");
@@ -55,10 +53,10 @@ function agregarMov() {
   liMetodoPago.textContent = "Pago realizado con: " + objetoMovimiento.metodo;
   liFecha.textContent = objetoMovimiento.fecha;
 
-  ul2.append(liTexto);
-  ul2.append(liMetodoPago);
-  ul2.append(liFecha);
-  div.append(ul2);
+  ul.append(liTexto);
+  ul.append(liMetodoPago);
+  ul.append(liFecha);
+  div.append(ul);
 
   if (movimientos.length == 1) {
     let divAux = document.createElement("div");
@@ -69,18 +67,35 @@ function agregarMov() {
   }
 }
 
-function fixAltura() {
-  let alturaDeA = document.getElementById(
-    "padre-dineroDisponible"
-  ).clientHeight;
-  let alturaDeB = document.getElementById(
-    "padre-ultimosmovimientos"
-  ).clientHeight;
-  if (alturaDeB >= alturaDeA) {
-    document.getElementById("padre-dineroDisponible").style.minHeight =
-      alturaDeB;
-  } else if (alturaDeB < alturaDeA) {
-    document.getElementById("padre-ultimosmovimientos").style.minHeight =
-      alturaDeA;
+width = document.documentElement.clientWidth;
+height = document.documentElement.clientHeight;
+function reportWindowSize() {
+  if (height > 1000) {
+    viewportHeight = Math.round(window.innerHeight);
+    altura("main-contenedor", viewportHeight);
+  } else {
+    altura("main-contenedor", "1000");
+  }
+  if (width <= 768) {
+    altura("main-contenedor", "auto");
   }
 }
+
+window.onresize = reportWindowSize;
+
+function altura(id, altura) {
+  let elemento = document.getElementById(id);
+  elemento.style.height = altura;
+}
+function ocultar(id) {
+  let elemento = document.getElementById(id);
+  elemento.style.display = "none";
+  elemento.style.visibility = "hidden";
+}
+function mostrar(id) {
+  let elemento = document.getElementById(id);
+  elemento.style.display = "block";
+  elemento.style.visibility = "visible";
+}
+
+function creacionOverlay() {}
