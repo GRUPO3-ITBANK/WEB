@@ -88,7 +88,20 @@
     </nav>
 
     <div class="col" id="main-contenedor">
-        <div id="overlay"></div>
+
+        <div id="overlay" class="modal-content shadow bg-white">
+            <div class="modal-header border-bottom-0">
+                <h5 id='tituloModal' class="modal-title"></h5>
+                <button type="button" class="btn-close" onclick="ocultar('overlay')"></button>
+            </div>
+            <div class="modal-body py-0" id="overlay-body">
+
+            </div>
+            <div class="modal-footer flex-column border-top-0">
+                <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2">Imprimir</button>
+                <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Compartir</button>
+            </div>
+        </div>
 
         <div class="col-md7" id="A">
 

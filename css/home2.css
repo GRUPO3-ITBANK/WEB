@@ -149,6 +149,7 @@ a.button4 {
     padding: 0 0 0 0;
     display: block;
   }
+
   #A {
     width: 100%;
     text-align: center;
@@ -312,6 +313,6 @@ ul {
   z-index: 1;
   box-shadow: 15px 15px 15px 15px rgb(0 0 0 / 25%);
   border-radius: 6px;
-  margin: -50px;
+  margin: 10px;
   display: none;
 }
