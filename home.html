@@ -89,17 +89,19 @@
 
     <div class="col" id="main-contenedor">
 
-        <div id="overlay" class="modal-content shadow bg-white">
-            <div class="modal-header border-bottom-0">
-                <h5 id='tituloModal' class="modal-title"></h5>
-                <button type="button" class="btn-close" onclick="ocultar('overlay')"></button>
-            </div>
-            <div class="modal-body py-0" id="overlay-body">
-
-            </div>
-            <div class="modal-footer flex-column border-top-0">
-                <button type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2">Imprimir</button>
-                <button type="button" class="btn btn-lg btn-light w-100 mx-0" data-bs-dismiss="modal">Compartir</button>
+        <div id="overlay" class="modal-content">
+            <div id="overlayHijo" class="modal-content shadow bg-white d-flex">
+                <div class="modal-header  rounded-top bg-light">
+                    <h5 id='tituloModal' class="modal-title p-3 fs-5"></h5>
+                    <button type="button" class="btn-close" onclick="ocultar('overlay')"></button>
+                </div>
+                <div class="modal-body py-0 d-flex justify-content-center align-items-center" id="overlay-body">
+                    <span id="detalleOperacion" class="text-center fs-5"></span>
+                </div>
+                <div class="modal-footer border-top-0 flex-wrap border-2 p-2 w-100">
+                    <button type="button" class="btn btn-lg btn-light m-2">Imprimir</button>
+                    <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">Compartir</button>
+                </div>
             </div>
         </div>
 

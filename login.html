@@ -94,7 +94,7 @@
               <div class="login__grupo mb-4" id="grupo__password">
                 <label for="password" class="login__label">Contraseña</label>
                 <div class="login__grupo-input">
-                  <input type="password" class="login__input" name="password" id="password" />
+                  <input type="password" class="login__input" name="password" id="password" autocomplete="on" />
                   <i class="login__validacion-estado fas"></i>
                 </div>
               </div>
@@ -107,15 +107,15 @@
                       class="login__btn login__btn-registrar">REGISTRARTE</button>
                   </div>
                   <div class="login__grupo login__grupo-btn-enviar">
-                    <button type="submit" id="submit"
-                      class="login__btn login__btn-ingresar ingresar-inactivo">INGRESAR</button>
+                    <input type="button" id="btnIngreso" class="login__btn login__btn-ingresar ingresar-inactivo"
+                      href="./recuperar-clave.html" value="INGRESAR" onclick="redirectSubmit()"></input>
 
                   </div>
 
 
 
                   <p>
-                    <a href="./recuperar-clave.html" class="olvide-clave">Olvide mi clave</a>
+                    <a href=" ./recuperar-clave.html" class="olvide-clave">Olvide mi clave</a>
                   </p>
                 </div>
             </form>

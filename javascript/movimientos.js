@@ -25,9 +25,16 @@ function agregarMov() {
     document.getElementById("Movimientos").style.height =
       document.getElementById("Movimientos").clientHeight;
   }
+
+  let div = document.createElement("div");
+  div.className = "divisor-movimientos";
+
   //creacion de nuevo objeto
+
   let objetoMovimiento = new Object();
-  //creo un numero random para asignarle un numero de operacion al objeto
+
+  //creo un numero random para hardcoedar un numero de operacion al objeto
+
   function nOperacion(lista) {
     if (lista.length > 0) {
       for (x in lista) {
@@ -40,29 +47,37 @@ function agregarMov() {
   }
 
   //asigno datos hardcodeados a cada propiedad del objeto
+  objetoMovimiento.nOperacion = nOperacion(movimientos);
   objetoMovimiento.tipoDeMovimiento = prompt("TIPO DE MOVIMIENTO SE REALIZÓ");
   objetoMovimiento.gasto = prompt("CUANTO GASTO");
   objetoMovimiento.metodo = prompt("Ingrese con qué pagó");
   objetoMovimiento.destino = prompt("DONDE O A QUIEN SE LE PAGÓ");
   objetoMovimiento.fecha = new Date().toLocaleString();
-  objetoMovimiento.nOperacion = nOperacion(movimientos);
-  //pusheo mi objeto con todas sus propiedades recien asignadas
-  movimientos.push(objetoMovimiento);
-  console.log(objetoMovimiento.nOperacion);
-  //div contenedor donde se pushean todos los movimientos
-  let contenedor = document.getElementById("Movimientos");
-  //creo div y le asigno clase
-  let div = document.createElement("div");
-  div.className = "divisor-movimientos";
+
   div.setAttribute(
     "onclick",
-    "mostrar('overlay');datosDelOverlay(" + objetoMovimiento.nOperacion + ")"
+    "mostrar('overlay');datosDelOverlay('" +
+      objetoMovimiento.nOperacion +
+      "','" +
+      objetoMovimiento.tipoDeMovimiento +
+      "','" +
+      objetoMovimiento.gasto +
+      "','" +
+      objetoMovimiento.metodo +
+      "','" +
+      objetoMovimiento.destino +
+      "','" +
+      objetoMovimiento.fecha +
+      "')"
   );
-  //creo elementos que voy a asignar más adelante
+
+  movimientos.push(objetoMovimiento);
+
   let ul = document.createElement("ul");
   let liFecha = document.createElement("li");
   let liTexto = document.createElement("li");
   let liMetodoPago = document.createElement("li");
+  ul.setAttribute("id", "liUltMov");
 
   liTexto.textContent =
     objetoMovimiento.tipoDeMovimiento +
@@ -81,9 +96,9 @@ function agregarMov() {
   if (movimientos.length == 1) {
     let divAux = document.createElement("div");
     divAux.append(div);
-    contenedor.innerHTML = divAux.innerHTML;
+    document.getElementById("Movimientos").innerHTML = divAux.innerHTML;
   } else if (movimientos.length > 1) {
-    contenedor.prepend(div);
+    document.getElementById("Movimientos").prepend(div);
   }
 }
 
@@ -114,18 +129,38 @@ function ocultar(id) {
 }
 function mostrar(id) {
   let elemento = document.getElementById(id);
-  elemento.style.display = "block";
+  elemento.style.display = "flex";
   elemento.style.visibility = "visible";
 }
 
-let overlay = document.getElementById("overlay");
-function datosDelOverlay(nOperacion) {
-  titulo = document.getElementById("tituloModal");
-  titulo.textContent = "n° de operación: " + nOperacion;
-  console.log(nOperacion);
-  // let contenido = document.createElement("p");
-
-  // contenido.textContent = objeto;
-
-  // document.getElementById("overlay-body").append(contenido);
+function datosDelOverlay(nOp, tipoMovimiento, valor, metodo, destino, fecha) {
+  let titulo = document.getElementById("tituloModal");
+  titulo.textContent = "n° de operación: " + nOp;
+  let body = document.getElementById("detalleOperacion");
+  body.innerHTML =
+    tipoMovimiento +
+    " a: " +
+    destino +
+    "<br />" +
+    "Monto: $" +
+    valor +
+    "<br />" +
+    "Pagaste con: " +
+    metodo +
+    "<br />" +
+    fecha;
 }
+
+document.addEventListener(
+  "click",
+  function (event) {
+    // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+    if (
+      !event.target.closest("#overlayHijo") &&
+      !event.target.closest("#liUltMov")
+    ) {
+      ocultar("overlay");
+    }
+  },
+  false
+);
