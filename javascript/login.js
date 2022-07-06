@@ -68,43 +68,49 @@ const validarFormulario = (e) => {
   }
 };
 
-let submit = document.getElementById("submit");
-submit.classList.contains("ingresar-inactivo");
-
+let btnIngreso = document.getElementById("btnIngreso");
+let btnIngActivado = false;
 function activaboton() {
   if (select.value == "USER") {
     if (campos.usuario && campos.password) {
-      if (submit.classList.contains("ingresar-inactivo")) {
-        submit.classList.remove("ingresar-inactivo");
+      if (btnIngreso.classList.contains("ingresar-inactivo")) {
+        btnIngreso.classList.remove("ingresar-inactivo");
+        btnIngActivado = true;
       }
     } else {
-      if (!submit.classList.contains("ingresar-inactivo")) {
-        submit.classList.add("ingresar-inactivo");
+      if (!btnIngreso.classList.contains("ingresar-inactivo")) {
+        btnIngreso.classList.add("ingresar-inactivo");
+        btnIngActivado = false;
       }
     }
   }
   if (select.value == "DNI") {
     if (campos.dni && campos.password) {
-      if (submit.classList.contains("ingresar-inactivo")) {
-        submit.classList.remove("ingresar-inactivo");
+      if (btnIngreso.classList.contains("ingresar-inactivo")) {
+        btnIngreso.classList.remove("ingresar-inactivo");
+        btnIngActivado = true;
       }
     } else {
-      if (!element.classList.contains("ingresar-inactivo")) {
-        submit.classList.add("ingresar-inactivo");
+      if (!btnIngreso.classList.contains("ingresar-inactivo")) {
+        btnIngreso.classList.add("ingresar-inactivo");
+        btnIngActivado = false;
       }
     }
   }
   if (select.value == "PAS") {
     if (campos.pasaporte && campos.password) {
-      if (submit.classList.contains("ingresar-inactivo")) {
-        submit.classList.remove("ingresar-inactivo");
+      if (btnIngreso.classList.contains("ingresar-inactivo")) {
+        btnIngreso.classList.remove("ingresar-inactivo");
+        btnIngActivado = true;
       }
     } else {
-      if (submit.classList.contains("ingresar-inactivo")) {
-        submit.classList.add("ingresar-inactivo");
+      if (!btnIngreso.classList.contains("ingresar-inactivo")) {
+        btnIngreso.classList.add("ingresar-inactivo");
+        btnIngActivado = false;
       }
     }
   }
+  return btnIngActivado;
 }
 
 const habilitarBoton = (e) => {
@@ -120,7 +126,7 @@ const habilitarBoton = (e) => {
 };
 
 function limpiarCampos() {
-  submit.classList.add("ingresar-inactivo");
+  btnIngreso.classList.add("ingresar-inactivo");
   document
     .getElementById("grupo__identificacion")
     .querySelector("i")
@@ -140,21 +146,8 @@ inputs.forEach((input) => {
   input.addEventListener("change", habilitarBoton);
 });
 
-login.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (select.value == "DNI") {
-    if (campos.dni && campos.password) {
-      login.reset();
-    }
+function redirectSubmit() {
+  if (activaboton()) {
+    location.href = "./home.html";
   }
-  if (select.value == "USER") {
-    if (campos.usuario && campos.password) {
-      login.reset();
-    }
-  }
-  if (select.value == "PAS") {
-    if (campos.pasaporte && campos.password) {
-      login.reset();
-    }
-  }
-});
+}

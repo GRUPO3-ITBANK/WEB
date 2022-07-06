@@ -87,8 +87,23 @@
         </ul>
     </nav>
 
-    <div class="col">
+    <div class="col" id="main-contenedor">
 
+        <div id="overlay" class="modal-content">
+            <div id="overlayHijo" class="modal-content shadow bg-white d-flex">
+                <div class="modal-header  rounded-top bg-light">
+                    <h5 id='tituloModal' class="modal-title p-3 fs-5"></h5>
+                    <button type="button" class="btn-close" onclick="ocultar('overlay')"></button>
+                </div>
+                <div class="modal-body py-0 d-flex justify-content-center align-items-center" id="overlay-body">
+                    <span id="detalleOperacion" class="text-center fs-5"></span>
+                </div>
+                <div class="modal-footer border-top-0 flex-wrap border-2 p-2 w-100">
+                    <button type="button" class="btn btn-lg btn-light m-2">Imprimir</button>
+                    <button type="button" class="btn btn-lg btn-primary" data-bs-dismiss="modal">Compartir</button>
+                </div>
+            </div>
+        </div>
 
         <div class="col-md7" id="A">
 
@@ -219,6 +234,7 @@
 
     </footer>
 </body>
+
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 <script src="./javascript/menu.js"></script>
 <script src="./javascript/movimientos.js"></script>
