@@ -14,21 +14,20 @@
 </head>
 <!-- ---BODY----- -->
 
-<body class>
+<body class="white-doc">
   <!-- HEADER -->
   <header>
     <!-- NAVBAR -->
-    <nav class="navbar bg-color">
+    <nav class="navbar bg-color shadow">
       <div class="container-fluid">
         <!-- LOGO -->
         <a href="./index.html">
           <img class="logo" src="./images/LOGO.png" class="d-inline-block align-text-top" />
         </a>
-        <!-- BOTONES NAV -->
 
         <div class="header-menu">
           <input type="checkbox" id="btn-menu">
-          <label for="btn-menu" class="icon-menu" onclick="desplegarHamburguesa()"></label>
+          <label for="btn-menu" class="icon-menu text-light" onclick="desplegarHamburguesa()"></label>
           <nav id="menu" class="menu menu-inactive">
             <ul>
               <li><a href="./login.html">Ingresar a banca online</a></li>
@@ -64,9 +63,9 @@
   <!-- FIN DE HEADER -->
 
   <!--LOGIN-->
-  <div class="row">
-    <div class="col-12">
-      <div class="login container md-5 bg-light">
+  <div class="row justify-content-center p-5" id="containerLogin">
+    <div class="col-auto">
+      <div class="login container md-5 bg-light p-4 rounded-4 mt-5 mb-5 shadow col-auto">
         <div class="row align-items-stretch">
           <div class="col p-5">
             <h2 class="fw-bold text-center">INICIAR SESION</h2>
@@ -125,9 +124,9 @@
     </div>
   </div>
 
-  <div class="espacio" style="height:100px; width:100%;"></div>
+  </div>
   <!-- Footer -->
-  <footer class="footer text-center text-lg-start bg-black">
+  <footer class="footer text-center text-lg-start bg-color">
     <section class="">
 
       <div class="container text-center text-md-start mt-1">
@@ -186,7 +185,7 @@
       </div>
     </section>
     <!-- Copyright -->
-    <div class="text-left p-1" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="d-flex p-3 justify-content-between">
       <p class="text-light">
         <span>© 2022 Banco ITBANK S.A. Todos
           los
@@ -194,6 +193,18 @@
         <span class="idiomas"><a href="#">Español</a> | <a href="#">English</a></span>
 
       </p>
+      <div id="divSwitch">
+
+        <input type="checkbox" class="switch" id="switch">
+        <label for="switch" class="switch-label">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </div>
+
+
 
   </footer>
 </body>

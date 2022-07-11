@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="./css/home.css" />
     <link rel="stylesheet" href="./css/home2.css" />
     <link rel="stylesheet" href="./css/fontello.css">
+    <script src="https://kit.fontawesome.com/c64a36e535.js" crossorigin="anonymous"></script>
 
     <title>Document</title>
 </head>
 
 <body>
-    <header>
+    <header class="shadow-lg">
         <!-- NAVBAR -->
         <nav class="navbar bg-color">
             <div class="container-fluid container">
@@ -40,17 +41,11 @@
                         <ul>
                             <li> <a href="#">Mi perfil</a></li>
                             <li> <a href="#">Configuración</a></li>
-
+                            <li> <a href="#">Cerrar sesión</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
         </nav>
     </header>
     <nav id="menu" class="menu menu-inactive">
@@ -91,8 +86,8 @@
 
         <div id="overlay" class="modal-content">
             <div id="overlayHijo" class="modal-content shadow bg-white d-flex">
-                <div class="modal-header  rounded-top bg-light">
-                    <h5 id='tituloModal' class="modal-title p-3 fs-5"></h5>
+                <div class="modal-header  rounded-top bg-light p-3">
+                    <h5 id='tituloModal' class="modal-title p-1 fs-5"></h5>
                     <button type="button" class="btn-close" onclick="ocultar('overlay')"></button>
                 </div>
                 <div class="modal-body py-0 d-flex justify-content-center align-items-center" id="overlay-body">
@@ -223,18 +218,30 @@
             </div>
         </section>
         <!-- Copyright -->
-        <div class="text-left p-1" style="background-color: rgba(0, 0, 0, 0.05);">
+        <div class="d-flex p-3 justify-content-between">
             <p class="text-light">
                 <span>© 2022 Banco ITBANK S.A. Todos
                     los
                     derechos Reservados.</span>
-                <span class="idiomas"><a href="#">Español</a> | <a href="#">English</a></span>
+                <span class="idiomas d-contents"><a href="#">Español</a> | <a href="#">English</a></span>
 
             </p>
+            <div id="divSwitch">
+
+                <input type="checkbox" class="switch" id="switch">
+                <label for="switch" class="switch-label">
+                    <i class="fa-solid fa-sun"></i>
+                    <i class="fa-solid fa-moon"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+        </div>
+
+
 
     </footer>
 </body>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
 <script src="./javascript/menu.js"></script>
 <script src="./javascript/movimientos.js"></script>

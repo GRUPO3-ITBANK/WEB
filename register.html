@@ -63,9 +63,9 @@
 
   <!--REGISTRO-->
 
-  <div class="row">
-    <div class="col-12">
-      <div class="register container p-4 md-5 bg-light">
+  <div class="row justify-content-center" id="containerRegistro">
+    <div class="col-lg-auto">
+      <div class="register container p-4 md-5 bg-light rounded-4 mt-5 mb-5 shadow col-auto">
         <div class="row align-items-stretch">
           <div class="col p-5">
             <h2 class="fw-bold text-center">REGISTRARSE</h2>
@@ -109,7 +109,7 @@
   <div class="espacio"></div>
 
   <!-- Footer -->
-  <footer class="footer text-center text-lg-start bg-black">
+  <footer class="footer text-center text-lg-start bg-color">
     <section class="">
 
       <div class="container text-center text-md-start mt-1">
@@ -168,14 +168,26 @@
       </div>
     </section>
     <!-- Copyright -->
-    <div class="text-left p-1" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="d-flex p-3 justify-content-between">
       <p class="text-light">
         <span>© 2022 Banco ITBANK S.A. Todos
           los
           derechos Reservados.</span>
-        <span class="idiomas"><a href="#">Español</a> | <a href="#">English</a></span>
+        <span class="idioma "><a href="#">Español</a> | <a href="#">English</a></span>
 
       </p>
+      <div id="divSwitch">
+
+        <input type="checkbox" class="switch" id="switch">
+        <label for="switch" class="switch-label">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </div>
+
+
 
   </footer>
 </body>
