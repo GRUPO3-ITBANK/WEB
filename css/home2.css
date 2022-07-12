@@ -253,10 +253,6 @@ ul {
   list-style: none;
 }
 
-#main-contenedor {
-  min-height: 1000px;
-}
-
 #overlay {
   height: 500px;
   width: 100%;

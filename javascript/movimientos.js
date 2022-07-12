@@ -104,24 +104,8 @@ function agregarMov() {
 
 width = document.documentElement.clientWidth;
 height = document.documentElement.clientHeight;
-function reportWindowSize() {
-  if (height > 1000) {
-    viewportHeight = Math.round(window.innerHeight);
-    altura("main-contenedor", viewportHeight);
-  } else {
-    altura("main-contenedor", "1000");
-  }
-  if (width <= 768) {
-    altura("main-contenedor", "auto");
-  }
-}
-
 window.onresize = reportWindowSize;
 
-function altura(id, altura) {
-  let elemento = document.getElementById(id);
-  elemento.style.height = altura;
-}
 function ocultar(id) {
   let elemento = document.getElementById(id);
   elemento.style.display = "none";
@@ -154,7 +138,6 @@ function datosDelOverlay(nOp, tipoMovimiento, valor, metodo, destino, fecha) {
 document.addEventListener(
   "click",
   function (event) {
-    // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
     if (
       !event.target.closest("#overlayHijo") &&
       !event.target.closest("#liUltMov")

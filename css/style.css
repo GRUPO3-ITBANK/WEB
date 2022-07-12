@@ -1,6 +1,6 @@
 .nav-mid-column {
   left: 0;
-  width: 70%;
+  width: 80%;
   height: 45px;
   position: relative;
   flex-wrap: nowrap;
@@ -8,55 +8,24 @@
   justify-content: space-between;
 }
 
-.ap {
-  text-decoration: none;
-  color: rgb(99, 172, 231);
-  display: inline-block;
-  font-weight: 400;
-  flex-wrap: nowrap;
-}
-.personas {
-  flex-wrap: nowrap;
-  position: relative;
-  top: 10px;
-  left: 20px;
-}
-.empresas {
-  padding-left: 40px;
-  position: absolute;
-  top: 10px;
-  flex-wrap: nowrap;
-}
-.btsNav {
-  padding-top: 8px;
-  display: inline;
-  position: relative;
-}
-.btn {
-  display: inline;
-  font-size: 13px;
-  background-color: #0b5ed7(46, 46, 46);
-  border-radius: 14px;
-  border: 1px solid rgb(17, 40, 90);
-  --bs-btn-hover-bg: #121314;
-}
-@media (max-width: 700px) {
+@media (max-width: 710px) {
   .ap {
     display: none;
   }
+  .nav-mid-column {
+    justify-content: end;
+  }
 }
-@media (max-width: 440px) {
-  .btsNav {
+@media (max-width: 505px) {
+  .btsNavbar {
     display: none;
   }
 }
-
 #navbarNav {
   width: 100%;
   z-index: 5;
   position: absolute;
 }
-
 #Carrusel {
   z-index: 0;
   position: absolute;
@@ -74,7 +43,7 @@
 }
 
 .acceso-rapido-fondo {
-  background-color: #00277c;
+  background-color: var(--details);
   height: 200px;
   width: 100%;
   align-items: center;
@@ -83,17 +52,13 @@
 #container-acceso-rapido {
   position: relative;
   min-height: max-content;
-  min-width: 100%;
+  min-width: 80%;
   padding: 0px 0px 0px 0px;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-/* }
-#espacio1 {
-  position: relative;
-  height: 800px;
-} */
+
 .acceso-rapido-text {
   color: #fff;
   text-align: center;
@@ -103,7 +68,7 @@
 .container-acceso-rapido-celular {
   position: relative;
   min-height: max-content;
-  min-width: 100%;
+  min-width: 80%;
   padding: 0px 0px 0px 0px;
   justify-content: center;
   align-items: center;
@@ -133,10 +98,7 @@
     display: inline;
   }
   .acceso-rapido-fondo {
-    background-color: #00277c;
     height: 160px;
-    width: 100%;
-    align-items: center;
   }
   .tamaño-iconos-acceso-rapido {
     height: 32px;
@@ -185,45 +147,15 @@
   }
 }
 
-.Dolar {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  width: max-content;
-  color: #fff;
-  border-radius: 20px;
-  margin-inline: auto;
+/* DOLAR */
+
+.dolar {
+  width: 80%;
+  color: white;
   background: linear-gradient(
     90deg,
     rgba(49, 163, 220, 0.9) 0%,
     rgba(1, 117, 191, 0.9),
     rgba(10, 73, 178, 0.9) 100%
   );
-}
-
-.ul-dolar {
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.05);
-  text-align: -webkit-center;
-  font-variant: JIS04;
-  padding: 10px 10px 10px 10px;
-  margin: 10px 40px;
-}
-@media (max-width: 1300px) {
-  .Dolar {
-    display: grid;
-    overflow: auto;
-    width: max-content;
-  }
-  .ul-dolar {
-    display: grid;
-  }
-}
-
-.dolar-title {
-  background: rgba(1, 1, 1, 0.1);
-  border-radius: 6px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 15px;
 }

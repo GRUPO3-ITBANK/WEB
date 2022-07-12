@@ -10,35 +10,39 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/fontello.css">
   <link rel="stylesheet" href="./css/general.css" />
-
+  <script src="https://kit.fontawesome.com/c64a36e535.js" crossorigin="anonymous"></script>
 </head>
+
 <!-- ---BODY----- -->
 
-<body class>
+<body class="dark-doc">
   <!-- HEADER -->
   <header>
     <!-- NAVBAR -->
-    <nav class="navbar bg-color">
+    <nav class="navbar bg-color shadow">
       <div class="container-fluid">
         <!-- LOGO -->
         <a href="./index.html">
           <img class="logo" src="./images/LOGO.png" class="d-inline-block align-text-top" />
         </a>
+
         <!-- BOTONES NAV -->
         <div class="nav-mid-column">
-          <div>
-            <a href="./index.html" class="ap personas">PERSONAS</a>
-            <a href="./indexE.html" class="ap empresas">EMPRESAS</a>
+          <div id="spansNavbar" class="p-3">
+            <a href="./index.html" class="ap personas text-light fw-semibold ">PERSONAS</a>
+            <a href="./indexE.html" class="ap empresas text-light fw-semibold ms-4">EMPRESAS</a>
           </div>
-          <div class="btsNav">
-            <a style="display:inline; --bs-btn-bg: #71abff;" class="btn btn-primary" href="./login.html">INGRESA</a>
-            <a style="display:inline; margin-left:30px;" class="btn btn-primary" href="./register.html">HACETE
+          <div class="btsNavbar pt-2">
+            <a class="btn btn-primary rounded-4 btn-sm ms-2" href="./login.html">INGRESA</a>
+            <a class="btn btn-primary rounded-4 btn-sm  ms-2" href="./register.html">HACETE
               CLIENTE</a>
           </div>
         </div>
+
+        <!-- HEADER MENU-->
         <div class="header-menu">
           <input type="checkbox" id="btn-menu">
-          <label for="btn-menu" class="icon-menu" onclick="desplegarHamburguesa()"></label>
+          <label for="btn-menu" class="icon-menu text-light" onclick="desplegarHamburguesa()"></label>
           <nav id="menu" class="menu menu-inactive">
             <ul>
               <li><a href="./login.html">Ingresar a banca online</a></li>
@@ -73,8 +77,8 @@
   </header>
   <!-- FIN DE HEADER -->
 
-  <!-- Carrusel -->
-  <div class="container car" id="contenedor-carrusel">
+  <!-- CARRUSEL -->
+  <div class="container car mb-5 shadow" id="contenedor-carrusel">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -116,7 +120,7 @@
 
   <!--ACCESO RAPIDO-->
   <div class="container" id="container-acceso-rapido">
-    <div class="acceso-rapido-fondo ">
+    <div class="acceso-rapido-fondo shadow rounded">
       <ul>
         <li class=li-accesorapido>
           <img src="./images/icons/credit-card.png" alt="Tarjetas">
@@ -192,54 +196,10 @@
     </div>
   </div>
 
+  <!--APARTADO DOLAR -->
   <br><br>
-  <div class="Dolar " id="apartadoDolar"></div>
+  <div class="dolar container-fluid d-flex justify-content-center flex-wrap rounded p-3" id="apartadoDolar"></div>
   <br><br>
-  <!-- Cards Dolar
-  <div class="container principal">
-    <div class="row">
-      <div class="card col-lg-6">
-        <div class="card-body">
-          <h5 class="card-title">Dolar Oficial</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-      <div class="card col-lg-6">
-        <div class="card-body">
-          <h5 class="card-title">Dolar Blue</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="card col-lg-4">
-        <div class="card-body">
-          <h5 class="card-title">Dolar Contado con Liqui</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-      <div class="card col-lg-4">
-        <div class="card-body">
-          <h5 class="card-title">Dolar Bolsa</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-      <div class="card col-lg-4">
-        <div class="card-body">
-          <h5 class="card-title">Dolar</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-      </div>
-    </div>
-  </div>
- -->
-
-
-
-
-
-
-
 
   <div class="card mb-3">
     <img src="images\card1.jpg" class="card-img-top card-image" alt="...">
@@ -271,7 +231,7 @@
 
   <div class="espacio1"></div>
   <!-- Footer -->
-  <footer class="footer text-center text-lg-start bg-black">
+  <footer class="footer text-center text-lg-start bg-color text-light">
     <section class="">
 
       <div class="container text-center text-md-start mt-1">
@@ -280,10 +240,10 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4 text-light">
+            <h6 class="text-uppercase fw-bold mb-4">
               <i class="fas fa-gem me-3"></i>Horarios de atención
             </h6>
-            <p class="text-light">
+            <p>
               Lunes a Viernes - 09:00hs a 20:00hs
               Sábado - 09:00hs a 12:00hs
             </p>
@@ -293,19 +253,19 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4 text-light">
+            <h6 class="text-uppercase fw-bold mb-4">
               Links de ayuda
             </h6>
-            <p class="text-light">
+            <p>
               <a href="#!" class="text-reset">Cuenta</a>
             </p>
-            <p class="text-light">
+            <p>
               <a href="#!" class="text-reset">Configuración</a>
             </p>
-            <p class="text-light">
+            <p>
               <a href="#!" class="text-reset">Tarjetas</a>
             </p>
-            <p class="text-light">
+            <p>
               <a href="#!" class="text-reset">Ayuda</a>
             </p>
           </div>
@@ -314,15 +274,15 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-sm-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4 text-light">
+            <h6 class="text-uppercase fw-bold mb-4>
               Contactanos
             </h6>
-            <p class="text-light"><i class="fas fa-home me-3"></i>Iguazú 341, C1437 CABA</p>
-            <p class="text-light">
-              <i class="fas fa-envelope me-3"></i>
-              info@itbank.com
-            </p>
-            <p class="text-light"><i class="fas fa-phone me-3"></i> 0810-222-4822</p>
+            <p><i class=" fas fa-home me-3"></i>Iguazú 341, C1437 CABA</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@itbank.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> 0810-222-4822</p>
           </div>
           <!-- Grid column -->
         </div>
@@ -330,18 +290,31 @@
       </div>
     </section>
     <!-- Copyright -->
-    <div class="text-left p-1" style="background-color: rgba(0, 0, 0, 0.05);">
-      <p class="text-light">
+    <div class="d-flex p-3 justify-content-between">
+      <p>
         <span>© 2022 Banco ITBANK S.A. Todos
           los
           derechos Reservados.</span>
         <span class="idiomas"><a href="#">Español</a> | <a href="#">English</a></span>
 
       </p>
+      <div id="divSwitch">
+
+        <input type="checkbox" class="switch" id="switch">
+        <label for="switch" class="switch-label">
+          <i class="fa-solid fa-sun"></i>
+          <i class="fa-solid fa-moon"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </div>
+
+
 
   </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./javascript/menu.js"></script>
 <script src="./javascript/preciodolar.js"></script>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
