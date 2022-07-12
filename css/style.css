@@ -1,6 +1,6 @@
 .nav-mid-column {
   left: 0;
-  width: 70%;
+  width: 80%;
   height: 45px;
   position: relative;
   flex-wrap: nowrap;
@@ -8,44 +8,24 @@
   justify-content: space-between;
 }
 
-.personas {
-  flex-wrap: nowrap;
-  position: relative;
-  top: 10px;
-  left: 20px;
-}
-.empresas {
-  padding-left: 40px;
-  position: absolute;
-  top: 10px;
-  flex-wrap: nowrap;
-}
-
-/* .btn {
-  display: inline;
-  font-size: 13px;
-  background-color: #0b5ed7(46, 46, 46);
-  border-radius: 14px;
-} */
-
-@media (max-width: 700px) {
-  .spansNavbar,
+@media (max-width: 710px) {
   .ap {
     display: none;
   }
+  .nav-mid-column {
+    justify-content: end;
+  }
 }
-@media (max-width: 410px) {
+@media (max-width: 505px) {
   .btsNavbar {
     display: none;
   }
 }
-
 #navbarNav {
   width: 100%;
   z-index: 5;
   position: absolute;
 }
-
 #Carrusel {
   z-index: 0;
   position: absolute;
@@ -167,10 +147,11 @@
   }
 }
 
+/* DOLAR */
+
 .dolar {
   width: 80%;
   color: white;
-  margin: auto;
   background: linear-gradient(
     90deg,
     rgba(49, 163, 220, 0.9) 0%,

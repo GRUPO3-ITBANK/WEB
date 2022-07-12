@@ -63,3 +63,21 @@ document.addEventListener("click", function (e) {
     submenu3.classList.add("submenu-inactive");
   }
 });
+
+//MODO OSCURO O CLARO
+let btnSwitch = document.getElementById("switch");
+
+btnSwitch.addEventListener("change", () => {
+  console.log("hola");
+  document.body.classList.toggle("white-doc");
+
+  document.body.classList.contains("white-doc")
+    ? localStorage.setItem("dark-mode", "true")
+    : localStorage.setItem("dark-mode", "false");
+});
+
+if (localStorage.getItem("dark-mode") === "true") {
+  document.body.classList.add("white-doc");
+
+  document.getElementById("switch").checked = true;
+}

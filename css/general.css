@@ -66,12 +66,6 @@ footer {
   text-shadow: #141414;
 }
 
-@media (max-height: 700px) {
-  .nav-mid-column {
-    display: none;
-  }
-}
-
 .navbar {
   /* border-width: 0 0 5px 0;
   border-style: solid;
@@ -79,6 +73,7 @@ footer {
   border-image-slice: 1; */
   height: 56px;
   flex-wrap: nowrap;
+  padding: 0 30px;
   position: fixed;
   width: 100%;
   z-index: 99999;
@@ -102,10 +97,16 @@ li {
 
 /* -------------------------- */
 
+.navbar {
+  height: 56px;
+  --bs-navbar-padding-y: 0.5;
+}
 .header-menu {
   top: 0;
+  color: #fff;
   display: flex;
   justify-content: flex-end;
+  width: 10%;
 }
 #btn-menu {
   display: none;
@@ -146,10 +147,6 @@ header label {
   padding: 10px 0px 10px 0px;
 }
 
-.menu ul ul {
-  padding: 10px 0px 20px 0px;
-  background-color: var(--bs-border-color-translucent);
-}
 .menu ul ul a {
   padding: 0px 0px 0px 40px;
 }

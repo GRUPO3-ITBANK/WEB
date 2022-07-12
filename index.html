@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/fontello.css">
   <link rel="stylesheet" href="./css/general.css" />
-
+  <script src="https://kit.fontawesome.com/c64a36e535.js" crossorigin="anonymous"></script>
 </head>
+
 <!-- ---BODY----- -->
 
-<body class="white-doc">
+<body class="dark-doc">
   <!-- HEADER -->
   <header>
     <!-- NAVBAR -->
@@ -24,18 +25,21 @@
         <a href="./index.html">
           <img class="logo" src="./images/LOGO.png" class="d-inline-block align-text-top" />
         </a>
+
         <!-- BOTONES NAV -->
         <div class="nav-mid-column">
-          <div id="spansNavbar">
-            <a href="./index.html" class="ap personas text-light fw-semibold">PERSONAS</a>
-            <a href="./indexE.html" class="ap empresas text-light fw-semibold">EMPRESAS</a>
+          <div id="spansNavbar" class="p-3">
+            <a href="./index.html" class="ap personas text-light fw-semibold ">PERSONAS</a>
+            <a href="./indexE.html" class="ap empresas text-light fw-semibold ms-4">EMPRESAS</a>
           </div>
           <div class="btsNavbar pt-2">
-            <a class="btn btn-primary rounded-4 btn-sm" href="./login.html">INGRESA</a>
-            <a class="btn btn-primary rounded-4 btn-sm" href="./register.html">HACETE
+            <a class="btn btn-primary rounded-4 btn-sm ms-2" href="./login.html">INGRESA</a>
+            <a class="btn btn-primary rounded-4 btn-sm  ms-2" href="./register.html">HACETE
               CLIENTE</a>
           </div>
         </div>
+
+        <!-- HEADER MENU-->
         <div class="header-menu">
           <input type="checkbox" id="btn-menu">
           <label for="btn-menu" class="icon-menu text-light" onclick="desplegarHamburguesa()"></label>
@@ -192,6 +196,7 @@
     </div>
   </div>
 
+  <!--APARTADO DOLAR -->
   <br><br>
   <div class="dolar container-fluid d-flex justify-content-center flex-wrap rounded p-3" id="apartadoDolar"></div>
   <br><br>
@@ -309,6 +314,7 @@
   </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./javascript/menu.js"></script>
 <script src="./javascript/preciodolar.js"></script>
 <script src="./recursos/bootstrap.bundle.min.js"></script>
